@@ -72,8 +72,7 @@ const Index = () => {
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
               Nekontroluji jen cenu samotné energie (silovou složku). Zaměřuji
               se i na regulovanou část vyúčtování – prověřím, zda zbytečně
-              nepřeplácíte kvůli nevhodně zvolené distribuční sazbě nebo příliš
-              vysokému rezervovanému příkonu (jističi).
+              nepřeplácíte kvůli nevhodně zvolené distribuční sazbě.
             </p>
 
             <p className="text-base md:text-lg text-foreground font-medium leading-relaxed">
