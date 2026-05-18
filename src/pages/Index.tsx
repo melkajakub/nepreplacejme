@@ -65,8 +65,7 @@ const Index = () => {
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
               Pomáhám domácnostem, firmám i obcím zorientovat se v jejich
               vyúčtování za elektřinu a plyn. Podívám se na vaše aktuální
-              náklady a nezávazně posoudím, zda jsou vaše ceny dlouhodobě
-              férové.
+              náklady a nezávazně posoudím, zda jsou vaše ceny férové.
             </p>
 
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
