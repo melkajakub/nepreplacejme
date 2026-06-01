@@ -1,24 +1,10 @@
-import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Send, Mail, ShieldCheck, FileCheck } from "lucide-react";
+import { LeadForm } from "@/components/LeadForm";
 
 const Index = () => {
-  useEffect(() => {
-    const w = "https://tally.so/widgets/embed.js";
-    if (typeof (window as any).Tally !== "undefined") {
-      (window as any).Tally.loadEmbeds();
-    } else if (!document.querySelector(`script[src="${w}"]`)) {
-      const s = document.createElement("script");
-      s.src = w;
-      s.onload = () => {
-        if (typeof (window as any).Tally !== "undefined") {
-          (window as any).Tally.loadEmbeds();
-        }
-      };
-      document.body.appendChild(s);
-    }
-  }, []);
+
 
   return (
     <div className="min-h-screen bg-background">
@@ -190,15 +176,7 @@ const Index = () => {
               </p>
             </div>
 
-            <iframe
-              data-tally-src="https://tally.so/embed/KYJ8zD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
-              loading="lazy"
-              width="100%"
-              height="648"
-              frameBorder="0"
-              title="Pošlete mi své vyúčtování"
-              style={{ border: "none" }}
-            />
+            <LeadForm />
           </div>
         </section>
       </main>

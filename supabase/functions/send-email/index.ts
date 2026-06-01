@@ -13,12 +13,12 @@ serve(async (req) => {
   try {
     const formData = await req.formData()
     const name = formData.get('name') as string
-    const birthDate = formData.get('birthDate') as string
     const email = formData.get('email') as string
+    const phone = (formData.get('phone') as string) || ''
     const message = formData.get('message') as string
     const file = formData.get('file') as File | null
 
-    console.log('Received form data:', { name, birthDate, email, hasMessage: !!message, hasFile: !!file })
+    console.log('Received form data:', { name, email, phone, hasMessage: !!message, hasFile: !!file })
 
     // Validate required fields
     if (!name || !email) {
@@ -31,23 +31,21 @@ serve(async (req) => {
       throw new Error('RESEND_API_KEY is not set')
     }
 
-    console.log('Resend API key detected, length:', RESEND_API_KEY.length)
-
     let emailPayload: any = {
-      from: 'Společně levněji <info@spolecnelevneji.cz>',
-      to: ['info@spolecnelevneji.cz'],
+      from: 'Nepřeplácejme <info@nepreplacejme.cz>',
+      to: ['info@nepreplacejme.cz'],
       reply_to: email || undefined,
-      subject: 'Nový zájem o hlídání cen energií',
+      subject: 'Nová žádost o posouzení vyúčtování',
       html: `
-        <h2>Nový zájem o službu</h2>
+        <h2>Nová žádost o posouzení vyúčtování</h2>
         <p><strong>Jméno:</strong> ${name}</p>
-        <p><strong>Datum narození:</strong> ${birthDate || 'Neuvedeno'}</p>
         <p><strong>E-mail:</strong> ${email}</p>
+        <p><strong>Telefon:</strong> ${phone || 'Neuvedeno'}</p>
         <p><strong>Zpráva:</strong></p>
         <p>${message || 'Zákazník nenapsal žádnou zprávu.'}</p>
         ${file ? '<p><strong>Příloha:</strong> Ano (viz příloha)</p>' : ''}
         <hr>
-        <p><small>Odesláno z kontaktního formuláře na spolecnelevneji.cz</small></p>
+        <p><small>Odesláno z kontaktního formuláře na nepreplacejme.cz</small></p>
       `,
     }
 
