@@ -8,7 +8,9 @@ import ScrollToTop from "./components/ScrollToTop";
 import Index from "./pages/Index";
 import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
+import Gdpr from "./pages/Gdpr";
 import NotFound from "./pages/NotFound";
+
 
 const queryClient = new QueryClient();
 
@@ -33,7 +35,10 @@ const App = () => {
             <Route path="/" element={<Index />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />
+            <Route path="/gdpr" element={<Gdpr />} />
+            <Route path="/ochrana-osobnich-udaju" element={<Gdpr />} />
             <Route path="*" element={<NotFound />} />
+
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

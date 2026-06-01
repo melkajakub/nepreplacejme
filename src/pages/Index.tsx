@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Send, Mail, ShieldCheck, FileCheck } from "lucide-react";
+import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck } from "lucide-react";
+
 import { LeadForm } from "@/components/LeadForm";
 
 const Index = () => {
@@ -44,26 +45,31 @@ const Index = () => {
         {/* Hero */}
         <section className="py-20 md:py-32 px-4">
           <div className="container mx-auto max-w-2xl text-center space-y-8">
-            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-relaxed tracking-tight">
-              Nepřeplácejme zbytečně za energie.
+            <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
+              Končí vám fixace nebo máte drahé energie? Nepřeplácejte zbytečně.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Pomáhám domácnostem, firmám i obcím zorientovat se v jejich
-              vyúčtování za elektřinu a plyn. Podívám se na vaše aktuální
-              náklady a nezávazně posoudím, zda jsou vaše podmínky férové.
+              Pomáhám domácnostem, firmám i obcím zorientovat se ve vyúčtování
+              za elektřinu a plyn. Pošlete mi svou fakturu ke kontrole – bez
+              nátlaku, bez otravných telefonátů a zcela zdarma.
             </p>
 
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Nekontroluji jen cenu samotné energie (silovou složku). Zaměřuji
-              se i na regulovanou část vyúčtování – prověřím, zda zbytečně
-              nepřeplácíte kvůli nevhodně zvolené distribuční sazbě.
-            </p>
-
-            <p className="text-base md:text-lg text-foreground font-medium leading-relaxed">
-              Pojďme se společně postarat o to, aby vaše rodina, firma nebo obec
-              už dál zbytečně nepřeplácela za energie.
-            </p>
+            {/* Social proof row */}
+            <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm md:text-base text-muted-foreground">
+              <li className="flex items-center gap-2">
+                <Check className="h-4 w-4 text-primary" aria-hidden="true" />
+                <span>100% nezávislé posouzení</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
+                <span>Žádné otravné call centrum</span>
+              </li>
+              <li className="flex items-center gap-2">
+                <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
+                <span>Osobní kontrola každé faktury</span>
+              </li>
+            </ul>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
               <Button
@@ -90,6 +96,7 @@ const Index = () => {
             </div>
           </div>
         </section>
+
 
         {/* Trust Pillars */}
         <section className="py-16 md:py-20 px-4 bg-[hsl(220_20%_98%)]">
@@ -163,28 +170,54 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Tally Form */}
+        {/* Form section */}
         <section id="formular" className="py-20 md:py-24 px-4 bg-[hsl(220_20%_98%)]">
-          <div className="container mx-auto max-w-lg space-y-8">
-            <div className="text-center space-y-3">
-              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                Pošlete mi své vyúčtování
-              </h2>
-              <p className="text-muted-foreground">
-                Stačí vyplnit základní údaje a přiložit vyúčtování. Ozvu se vám
-                s nezávazným posouzením.
-              </p>
-            </div>
+          <div className="container mx-auto max-w-6xl">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
+              {/* Left column: copy + avatar */}
+              <div className="space-y-8">
+                <div className="space-y-4">
+                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                    Pošlete mi své vyúčtování
+                  </h2>
+                  <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                    Stačí vyplnit základní údaje a přiložit soubor. Vaše
+                    dokumenty projdu osobně a na rovinu vám řeknu, zda máte
+                    férové podmínky.
+                  </p>
+                </div>
 
-            <LeadForm />
+                <div className="flex items-center gap-4 pt-2">
+                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden shrink-0">
+                    <img
+                      src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
+                      alt="Jakub Melka"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div>
+                    <p className="font-semibold text-foreground">Jakub Melka</p>
+                    <p className="text-sm text-muted-foreground">
+                      Váš nezávislý energetický poradce
+                    </p>
+                  </div>
+                </div>
+              </div>
+
+              {/* Right column: form */}
+              <div className="bg-background border border-border rounded-lg p-6 md:p-8 shadow-sm">
+                <LeadForm />
+              </div>
+            </div>
           </div>
         </section>
+
       </main>
 
       {/* Footer */}
       <footer className="border-t border-border py-10 px-4">
         <div className="container mx-auto max-w-2xl text-center space-y-3">
-          <div className="flex justify-center gap-6 mb-4">
+          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4">
             <Link
               to="/blog"
               className="text-sm text-muted-foreground hover:text-foreground transition-colors"
@@ -197,7 +230,14 @@ const Index = () => {
             >
               Poslat vyúčtování
             </a>
+            <Link
+              to="/gdpr"
+              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
+            >
+              Zásady zpracování osobních údajů (GDPR)
+            </Link>
           </div>
+
           <p className="text-sm text-muted-foreground">
             Nepřeplácejme · Jakub Melka · IČO: 22516280 ·{" "}
             <a href="mailto:info@nepreplacejme.cz" className="hover:text-foreground transition-colors">
