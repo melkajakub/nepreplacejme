@@ -74,6 +74,22 @@
       gtag('config', 'G-SFPV7LPCLG');
       gtag('config', 'AW-18205815889');
     </script>
+
+    <!-- Google Ads conversion event helper -->
+    <script>
+      function gtagSendEvent(url) {
+        var callback = function () {
+          if (typeof url === 'string') {
+            window.location = url;
+          }
+        };
+        gtag('event', 'ads_conversion_Odesl_n_formul_e_pro_z__1', {
+          'event_callback': callback,
+          'event_timeout': 2000,
+        });
+        return false;
+      }
+    </script>
   </head>
 
   <body>
