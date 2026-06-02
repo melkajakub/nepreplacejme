@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck } from "lucide-react";
 
-import { LeadForm } from "@/components/LeadForm";
+import { TallyEmbed } from "@/components/TallyEmbed";
 
 const Index = () => {
 
@@ -205,8 +205,8 @@ const Index = () => {
               </div>
 
               {/* Right column: form */}
-              <div className="bg-background border border-border rounded-lg p-6 md:p-8 shadow-sm">
-                <LeadForm />
+              <div className="bg-background border border-border rounded-lg p-4 md:p-6 shadow-sm overflow-hidden">
+                <TallyEmbed />
               </div>
             </div>
           </div>
