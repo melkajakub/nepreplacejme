@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck, FileSearch, KeyRound, HardHat, ArrowRight } from "lucide-react";
+import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck, FileSearch, KeyRound, HardHat, ArrowRight, Home, Building2, Landmark } from "lucide-react";
 
 import { TallyEmbed } from "@/components/TallyEmbed";
 
@@ -46,14 +46,29 @@ const Index = () => {
         <section className="py-20 md:py-28 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Faktury, přepisy i nové přípojky. Vyřešíme vaše energie bez papírování.
+              Pomáháme domácnostem, firmám a obcím, aby nepřeplácely za energie.
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Zkontrolujeme stávající vyúčtování, kompletně zařídíme přepis při
-              koupi nemovitosti, nebo vyběháme nové odběrné místo na zelené
-              louce. Vše online, zdarma a nezávisle.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
+              Ať už řešíte kontrolu faktur pro rodinný dům, optimalizaci nákladů pro firmu, přepis při koupi nemovitosti nebo novou přípojku na stavbě. Vyřídíme kompletní energetickou byrokracii bez papírování, online a 100% nezávisle.
             </p>
+
+            {/* Audience badges */}
+            <div className="flex flex-wrap justify-center gap-3 pt-2">
+              {[
+                { icon: Home, label: "Pro domácnosti" },
+                { icon: Building2, label: "Pro firmy a podnikatele" },
+                { icon: Landmark, label: "Pro obce a samosprávy" },
+              ].map(({ icon: Icon, label }) => (
+                <span
+                  key={label}
+                  className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/5 border border-primary/10 text-sm font-medium text-primary"
+                >
+                  <Icon className="h-4 w-4" />
+                  {label}
+                </span>
+              ))}
+            </div>
 
             {/* Social proof row */}
             <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm md:text-base text-muted-foreground">
@@ -101,7 +116,7 @@ const Index = () => {
                 {
                   icon: FileSearch,
                   title: "Chci zkontrolovat fakturu",
-                  desc: "Mám pocit, že přeplácím ČEZu / E.ONu a chci nezávislé posouzení zdarma.",
+                  desc: "Mám pocit, že přeplácím svému dodavateli a chci nezávislé posouzení faktury zdarma.",
                 },
                 {
                   icon: KeyRound,
