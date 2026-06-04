@@ -74,15 +74,15 @@ const Index = () => {
             <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm md:text-base text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>100% nezávislé posouzení</span>
+                <span>100% nezávislé posouzení (jsem váš průvodce, nic nepodepisuji za vás)</span>
               </li>
               <li className="flex items-center gap-2">
                 <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Žádné otravné call centrum</span>
+                <span>Žádný nátlak a otravné telefonáty z call center</span>
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Osobní kontrola každé faktury</span>
+                <span>Pokud už máte skvělou cenu, na rovinu vám doporučím u současného dodavatele zůstat</span>
               </li>
             </ul>
 
