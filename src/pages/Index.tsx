@@ -116,17 +116,17 @@ const Index = () => {
                 {
                   icon: FileSearch,
                   title: "Chci zkontrolovat fakturu",
-                  desc: "Mám pocit, že přeplácím svému dodavateli a chci nezávislé posouzení faktury zdarma.",
+                  desc: "Máte pocit, že přeplácíte svému dodavateli? Vaši fakturu osobně projdu a na rovinu vám řeknu, zda máte férové podmínky.",
                 },
                 {
                   icon: KeyRound,
                   title: "Koupil jsem nemovitost / Řeším přepis",
-                  desc: "Chci kompletně přepsat energie na nové jméno a rovnou získat nejlepší tarif.",
+                  desc: "Provedu vás celým procesem přepisu energií na nové jméno. Připravím pro vás ty nejvýhodnější podmínky a pohlídám, ať nic nepodepíšete špatně.",
                 },
                 {
                   icon: HardHat,
                   title: "Stavím dům / Nové odběrné místo",
-                  desc: "Potřebuji novou přípojku, sloupek, elektroměr a smlouvu s dodavatelem od nuly.",
+                  desc: "Potřebujete novou přípojku, sloupek nebo elektroměr? Pomohu vám s celým postupem od nuly a navedu vás, jak hladce získat smlouvu s distributorem.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <a
