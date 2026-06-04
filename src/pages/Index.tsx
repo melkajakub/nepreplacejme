@@ -46,11 +46,11 @@ const Index = () => {
         <section className="py-20 md:py-28 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Pomáháme domácnostem, firmám a obcím, aby nepřeplácely za energie.
+              Pomáhám domácnostem, firmám a obcím, aby nepřeplácely za energie.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Ať už řešíte kontrolu faktur pro rodinný dům, optimalizaci nákladů pro firmu, přepis při koupi nemovitosti nebo novou přípojku na stavbě. Vyřídíme kompletní energetickou byrokracii bez papírování, online a 100% nezávisle.
+              Ať už řešíte kontrolu faktur pro rodinný dům, optimalizaci nákladů pro firmu, přepis při koupi nemovitosti nebo novou přípojku na stavbě. Celým procesem a energetickou byrokracií vás bezpečně provedu. Vše pro vás připravím online, férově a 100% nezávisle – finální rozhodnutí a podpis smlouvy s dodavatelem je ale vždy na vás.
             </p>
 
             {/* Audience badges */}
@@ -74,15 +74,15 @@ const Index = () => {
             <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm md:text-base text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>100% nezávislé posouzení</span>
+                <span>100% nezávislé posouzení (jsem váš průvodce, nic nepodepisuji za vás)</span>
               </li>
               <li className="flex items-center gap-2">
                 <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Žádné otravné call centrum</span>
+                <span>Žádný nátlak a otravné telefonáty z call center</span>
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Osobní kontrola každé faktury</span>
+                <span>Pokud už máte skvělou cenu, na rovinu vám doporučím u současného dodavatele zůstat</span>
               </li>
             </ul>
 
@@ -116,17 +116,17 @@ const Index = () => {
                 {
                   icon: FileSearch,
                   title: "Chci zkontrolovat fakturu",
-                  desc: "Mám pocit, že přeplácím svému dodavateli a chci nezávislé posouzení faktury zdarma.",
+                  desc: "Máte pocit, že přeplácíte svému dodavateli? Vaši fakturu osobně projdu a na rovinu vám řeknu, zda máte férové podmínky.",
                 },
                 {
                   icon: KeyRound,
                   title: "Koupil jsem nemovitost / Řeším přepis",
-                  desc: "Chci kompletně přepsat energie na nové jméno a rovnou získat nejlepší tarif.",
+                  desc: "Provedu vás celým procesem přepisu energií na nové jméno. Připravím pro vás ty nejvýhodnější podmínky a pohlídám, ať nic nepodepíšete špatně.",
                 },
                 {
                   icon: HardHat,
                   title: "Stavím dům / Nové odběrné místo",
-                  desc: "Potřebuji novou přípojku, sloupek, elektroměr a smlouvu s dodavatelem od nuly.",
+                  desc: "Potřebujete novou přípojku, sloupek nebo elektroměr? Pomohu vám s celým postupem od nuly a navedu vás, jak hladce získat smlouvu s distributorem.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <a
