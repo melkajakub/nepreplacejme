@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck } from "lucide-react";
+import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck, FileSearch, KeyRound, HardHat, ArrowRight } from "lucide-react";
 
 import { TallyEmbed } from "@/components/TallyEmbed";
 
@@ -43,16 +43,16 @@ const Index = () => {
 
       <main>
         {/* Hero */}
-        <section className="py-20 md:py-32 px-4">
-          <div className="container mx-auto max-w-2xl text-center space-y-8">
+        <section className="py-20 md:py-28 px-4">
+          <div className="container mx-auto max-w-5xl text-center space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Máte jistotu, že za elektřinu a plyn nepřeplácíte? Nechte si zdarma a v klidu prověřit své vyúčtování.
+              Faktury, přepisy i nové přípojky. Vyřešíme vaše energie bez papírování.
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-xl mx-auto">
-              Pomáhám domácnostem, firmám i obcím zorientovat se ve vyúčtování
-              za elektřinu a plyn. Pošlete mi svou fakturu ke kontrole – bez
-              nátlaku, bez otravných telefonátů a zcela zdarma.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Zkontrolujeme stávající vyúčtování, kompletně zařídíme přepis při
+              koupi nemovitosti, nebo vyběháme nové odběrné místo na zelené
+              louce. Vše online, zdarma a nezávisle.
             </p>
 
             {/* Social proof row */}
@@ -93,6 +93,47 @@ const Index = () => {
                   Více o projektu Nepřeplácejme
                 </Link>
               </Button>
+            </div>
+
+            {/* Three paths cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pt-10 md:pt-14 text-left">
+              {[
+                {
+                  icon: FileSearch,
+                  title: "Chci zkontrolovat fakturu",
+                  desc: "Mám pocit, že přeplácím ČEZu / E.ONu a chci nezávislé posouzení zdarma.",
+                },
+                {
+                  icon: KeyRound,
+                  title: "Koupil jsem nemovitost / Řeším přepis",
+                  desc: "Chci kompletně přepsat energie na nové jméno a rovnou získat nejlepší tarif.",
+                },
+                {
+                  icon: HardHat,
+                  title: "Stavím dům / Nové odběrné místo",
+                  desc: "Potřebuji novou přípojku, sloupek, elektroměr a smlouvu s dodavatelem od nuly.",
+                },
+              ].map(({ icon: Icon, title, desc }) => (
+                <a
+                  key={title}
+                  href="#formular"
+                  className="group flex flex-col gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-glow hover:border-primary/40 transition-all"
+                >
+                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon className="h-6 w-6 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {desc}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-1">
+                    Začít zdarma
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+              ))}
             </div>
           </div>
         </section>
