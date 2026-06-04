@@ -116,7 +116,7 @@ const Index = () => {
                 {
                   icon: FileSearch,
                   title: "Chci zkontrolovat fakturu",
-                  desc: "Mám pocit, že přeplácím ČEZu / E.ONu a chci nezávislé posouzení zdarma.",
+                  desc: "Mám pocit, že přeplácím svému dodavateli a chci nezávislé posouzení faktury zdarma.",
                 },
                 {
                   icon: KeyRound,
