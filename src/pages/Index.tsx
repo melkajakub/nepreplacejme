@@ -82,7 +82,7 @@ const Index = () => {
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Pokud už máte skvělou cenu, na rovinu vám doporučím u současného dodavatele zůstat</span>
+                <span>Pokud dostanete férovou nabídku od stavajícího dodavatele, na rovinu vám doporučím u současného dodavatele zůstat</span>
               </li>
             </ul>
 
