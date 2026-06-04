@@ -46,11 +46,11 @@ const Index = () => {
         <section className="py-20 md:py-28 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Pomáháme domácnostem, firmám a obcím, aby nepřeplácely za energie.
+              Pomáhám domácnostem, firmám a obcím, aby nepřeplácely za energie.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Ať už řešíte kontrolu faktur pro rodinný dům, optimalizaci nákladů pro firmu, přepis při koupi nemovitosti nebo novou přípojku na stavbě. Vyřídíme kompletní energetickou byrokracii bez papírování, online a 100% nezávisle.
+              Ať už řešíte kontrolu faktur pro rodinný dům, optimalizaci nákladů pro firmu, přepis při koupi nemovitosti nebo novou přípojku na stavbě. Celým procesem a energetickou byrokracií vás bezpečně provedu. Vše pro vás připravím online, férově a 100% nezávisle – finální rozhodnutí a podpis smlouvy s dodavatelem je ale vždy na vás.
             </p>
 
             {/* Audience badges */}
