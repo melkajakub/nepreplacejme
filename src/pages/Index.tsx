@@ -43,8 +43,8 @@ const Index = () => {
 
       <main>
         {/* Hero */}
-        <section className="py-20 md:py-32 px-4">
-          <div className="container mx-auto max-w-2xl text-center space-y-8">
+        <section className="py-20 md:py-28 px-4">
+          <div className="container mx-auto max-w-5xl text-center space-y-8">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
               Faktury, přepisy i nové přípojky. Vyřešíme vaše energie bez papírování.
             </h1>
