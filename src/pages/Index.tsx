@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
-import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck, FileSearch, KeyRound, HardHat, ArrowRight } from "lucide-react";
+import { Send, Mail, ShieldCheck, FileCheck, Check, PhoneOff, UserCheck, FileSearch, KeyRound, HardHat, ArrowRight, Home, Building2, Landmark } from "lucide-react";
 
 import { TallyEmbed } from "@/components/TallyEmbed";
 
