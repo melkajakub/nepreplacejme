@@ -3,6 +3,7 @@ import { useEffect } from "react";
 declare global {
   interface Window {
     Tally?: { loadEmbeds: () => void };
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
@@ -13,14 +14,24 @@ export const TallyEmbed = () => {
 
     if (document.querySelector(`script[src="${src}"]`)) {
       load();
-      return;
+    } else {
+      const s = document.createElement("script");
+      s.src = src;
+      s.async = true;
+      s.onload = load;
+      s.onerror = load;
+      document.body.appendChild(s);
     }
-    const s = document.createElement("script");
-    s.src = src;
-    s.async = true;
-    s.onload = load;
-    s.onerror = load;
-    document.body.appendChild(s);
+
+    const onMessage = (e: MessageEvent) => {
+      if (typeof e.data !== "string") return;
+      if (!e.data.includes("Tally.FormSubmitted")) return;
+      window.gtag?.("event", "conversion", {
+        send_to: "AW-18205815889/SUBMIT_LEAD_FORM",
+      });
+    };
+    window.addEventListener("message", onMessage);
+    return () => window.removeEventListener("message", onMessage);
   }, []);
 
   return (
