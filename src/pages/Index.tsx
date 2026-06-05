@@ -82,7 +82,7 @@ const Index = () => {
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Pokud dostanete férovou nabídku od stavajícího dodavatele, na rovinu vám doporučím u současného dodavatele zůstat</span>
+                <span>Většinou vám dokážu nabídnout výhodnější podmínky u známých velkých dodavatelů, než jaké máte teď</span>
               </li>
             </ul>
 
@@ -183,7 +183,7 @@ const Index = () => {
                   Energetický dohled
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Hlídám vaše odběrná místa jako svá vlastní. Termíny i pohyby trhu.
+                  Hlídám vaše odběrná místa jako svá vlastní. Sleduji termíny vašich smluv i pohyby na trhu, abych vám skvělé podmínky dokázal udržovat dlouhodobě.
                 </p>
               </div>
 
@@ -193,10 +193,10 @@ const Index = () => {
                   <FileCheck className="h-6 w-6 text-primary" />
                 </div>
                 <h3 className="text-lg font-semibold text-foreground">
-                  Férové posouzení
+                  Lepší podmínky
                 </h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
-                  Pokud už máte skvělou cenu, narovinu vám doporučím u dodavatele zůstat.
+                  Vaše současné smlouvy podrobně zanalyzuji. Ve většině případů vám dokážu zajistit výhodnější tarif u známých a stabilních dodavatelů, se kterým budete mít jistotu, že zbytečně nepřeplácíte.
                 </p>
               </div>
             </div>
