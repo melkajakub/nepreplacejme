@@ -136,7 +136,22 @@ const Index = () => {
                 >
                   <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
-                  </div>
+            </div>
+
+            {/* Low consumption callout */}
+            <div className="mt-10 md:mt-14 max-w-3xl mx-auto">
+              <div className="relative p-6 md:p-8 rounded-xl bg-primary/5 border border-primary/15 shadow-sm overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary/30" />
+                <div className="relative space-y-3">
+                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-snug">
+                    Máte byt s malou spotřebou? I tak můžete přeplácet tisíce!
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    Spousta lidí v bytech si myslí, že při nízké spotřebě nemá smysl faktury řešit. Opak je pravdou. Velmi často narážím na špatně nastavenou distribuční sazbu a zároveň zbytečně vysokou cenu. Při této kombinaci vám dokážu ušetřit až 2 000 Kč ročně, přestože proudem nijak neplýtváte. Nechte mě vaše fixní platby prověřit.
+                  </p>
+                </div>
+              </div>
+            </div>
                   <h3 className="text-lg font-semibold text-foreground leading-snug">
                     {title}
                   </h3>
