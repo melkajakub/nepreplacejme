@@ -163,11 +163,42 @@ const BlogPost = () => {
                 : "Pokud chcete mít klid, že neplatíte víc, než musíte, rád se na vaše vyúčtování podívám. Stačí mi ho nahrát v PDF a já vám napíšu svůj pohled."}
             </p>
             <Button size="lg" className="text-xs sm:text-sm md:text-base px-5 py-3 md:px-8 w-full sm:w-auto whitespace-normal text-center" asChild>
-              <Link to="/#formular" onClick={handleCtaClick}>
-                <Upload className="mr-2 h-4 w-4 shrink-0" />
-                {isVietnamese ? "NAHRÁT FAKTURU / TẢI HÓA ĐƠN LÊN" : "NAHRÁT VYÚČTOVÁNÍ KE KONTROLE"}
-              </Link>
+              {isVietnamese ? (
+                <a
+                  href="https://tally.so/r/KYJ8zD"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={handleCtaClick}
+                >
+                  <Upload className="mr-2 h-4 w-4 shrink-0" />
+                  NAHRÁT FAKTURU / TẢI HÓA ĐƠN LÊN
+                </a>
+              ) : (
+                <Link to="/#formular" onClick={handleCtaClick}>
+                  <Upload className="mr-2 h-4 w-4 shrink-0" />
+                  NAHRÁT VYÚČTOVÁNÍ KE KONTROLE
+                </Link>
+              )}
             </Button>
+            {isVietnamese && (
+              <p className="text-sm text-muted-foreground/80 leading-relaxed">
+                Nebo mi stačí poslat fotku či PDF faktury na e-mail:{" "}
+                <a
+                  href="mailto:info@nepreplacejme.cz"
+                  className="underline hover:text-foreground transition-colors"
+                >
+                  info@nepreplacejme.cz
+                </a>
+                <br />
+                Hoặc bạn chỉ cần gửi ảnh hoặc file PDF hóa đơn do email:{" "}
+                <a
+                  href="mailto:info@nepreplacejme.cz"
+                  className="underline hover:text-foreground transition-colors"
+                >
+                  info@nepreplacejme.cz
+                </a>
+              </p>
+            )}
           </div>
         </article>
       </main>
