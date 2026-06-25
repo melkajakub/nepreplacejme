@@ -1,4 +1,0 @@
-project_id = "cctflcnhlfjtmlmywbcp"
-
-[functions.keep-alive]
-verify_jwt = false
