@@ -15,8 +15,6 @@ import {
   Home,
   Building2,
   Landmark,
-  Lock,
-  Scale,
   Handshake,
   Ban,
   FileText,
@@ -301,24 +299,24 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-3">
-                  Individuální velkoobchodní nákup
+                  Optimalizace ceníků i individuální velkoobchodní nákup
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Řešení na míru pro větší odběry navázané na reálný vývoj trhu.
+                  Řešení podle velikosti odběru – od optimálního ceníku pro menší firmy až po individuální nákup pro velké odběry.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
                     {
-                      title: "Přístup k individuálním nabídkám",
-                      desc: "Oslovím klíčové hráče na trhu pro ceny odpovídající aktuálnímu vývoji burzy.",
+                      title: "Řešení na míru podle velikosti odběru",
+                      desc: "Pro menší firmy vybereme nejvýhodnější ceník na trhu, pro velké odběry zajišťujeme individuální nákup s návazností na velkoobchodní trh.",
                     },
                     {
                       title: "Maximální konkurenceschopnost",
-                      desc: "Díky efektivnímu fungování bez zbytečné režie tlačím výslednou cenu na minimum.",
+                      desc: "Díky nízké režii a přímé orientaci na trhu tlačím celkovou cenu na minimum.",
                     },
                     {
                       title: "Kompletní energetický servis",
-                      desc: "Hlídání termínů fixací, kontrola nastavení jističů a správa administrativy.",
+                      desc: "Hlídání konce fixací, kontrola správnosti nastavení a správa administrativy.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
@@ -408,27 +406,22 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
               Pilíře, na kterých stavím
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 {
-                  icon: Lock,
-                  title: "100% bezpečnost",
-                  desc: "Spolupráce výhradně s licencovanými a finančně silnými dodavateli na trhu.",
-                },
-                {
-                  icon: Scale,
-                  title: "Plná legálnost a etika",
-                  desc: "Veškeré postupy v absolutním souladu s energetickým zákonem a ERÚ.",
+                  icon: ShieldCheck,
+                  title: "Spolupráce s lídry trhu",
+                  desc: "Nabízím výhradně dodávky od předních, stabilních a prověřených českých dodavatelů.",
                 },
                 {
                   icon: Handshake,
-                  title: "Nezávislost",
-                  desc: "Doporučuji vždy to, co vychází nejlépe pro vaše konkrétní odběrné místo.",
+                  title: "Nezávislý přístup",
+                  desc: "Doporučuji vždy to řešení, které dává největší smysl pro vaše konkrétní odběrné místo.",
                 },
                 {
                   icon: Ban,
                   title: "Nulový nátlak",
-                  desc: "Rozhodnutí je vždy 100 % na vás. Žádné nutitelské praktiky ani skryté závazky.",
+                  desc: "Rozhodnutí je vždy 100 % na vás. Žádné vmanipulování do nevýhodných smluv.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
