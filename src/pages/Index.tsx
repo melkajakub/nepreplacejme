@@ -247,17 +247,17 @@ const Index = () => {
                   Klid a jistota pro váš domov
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Nezávislé srovnání ceníků od prověřených a stabilních českých dodavatelů.
+                  Nezávislé srovnání ceníků a výběr férového řešení od prověřených českých dodavatelů.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
                     {
-                      title: "Srovnání TOP dodavatelů",
-                      desc: "Průzkum trhu a výběr spolehlivého partnera s férovou cenou.",
+                      title: "Srovnání dostupných ceníků",
+                      desc: "Nezávislý průzkum trhu a výběr spolehlivého partnera s nejvýhodnější cenou.",
                     },
                     {
                       title: "Srozumitelně a polopatě",
-                      desc: "Vše vysvětlím lidskou řečí bez složité hantýrky a kliček.",
+                      desc: "Vše vysvětleno lidskou řečí bez složité hantýrky a kliček.",
                     },
                     {
                       title: "Bez starostí",
