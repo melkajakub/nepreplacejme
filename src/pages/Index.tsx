@@ -494,7 +494,7 @@ const Index = () => {
                   <div>
                     <p className="font-semibold text-foreground">Jakub Melka</p>
                     <p className="text-sm text-muted-foreground">
-                      Nezávislý nákupčí a poradce pro energie
+                      Váš nezávislý partner pro nákup a správu energií
                     </p>
                   </div>
                 </div>
