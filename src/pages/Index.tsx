@@ -408,27 +408,22 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-12">
               Pilíře, na kterých stavím
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+            <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
               {[
                 {
-                  icon: Lock,
-                  title: "100% bezpečnost",
-                  desc: "Spolupráce výhradně s licencovanými a finančně silnými dodavateli na trhu.",
-                },
-                {
-                  icon: Scale,
-                  title: "Plná legálnost a etika",
-                  desc: "Veškeré postupy v absolutním souladu s energetickým zákonem a ERÚ.",
+                  icon: ShieldCheck,
+                  title: "Spolupráce s lídry trhu",
+                  desc: "Nabízím výhradně dodávky od předních, stabilních a prověřených českých dodavatelů.",
                 },
                 {
                   icon: Handshake,
-                  title: "Nezávislost",
-                  desc: "Doporučuji vždy to, co vychází nejlépe pro vaše konkrétní odběrné místo.",
+                  title: "Nezávislý přístup",
+                  desc: "Doporučuji vždy to řešení, které dává největší smysl pro vaše konkrétní odběrné místo.",
                 },
                 {
                   icon: Ban,
                   title: "Nulový nátlak",
-                  desc: "Rozhodnutí je vždy 100 % na vás. Žádné nutitelské praktiky ani skryté závazky.",
+                  desc: "Rozhodnutí je vždy 100 % na vás. Žádné vmanipulování do nevýhodných smluv.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
