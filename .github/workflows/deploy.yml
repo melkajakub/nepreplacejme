@@ -11,9 +11,11 @@ permissions:
   pages: write
   id-token: write
 
+# Allow one concurrent deployment; queue new ones instead of cancelling
+# (cancel-in-progress: true is the usual cause of "cancelled" Pages runs).
 concurrency:
   group: "pages"
-  cancel-in-progress: true
+  cancel-in-progress: false
 
 jobs:
   build:
@@ -27,6 +29,9 @@ jobs:
         with:
           node-version: 20
           cache: npm
+
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
       - name: Install dependencies
         run: npm ci
