@@ -474,8 +474,12 @@ const Index = () => {
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                     Ozvu se vám zpět s konkrétním návrhem. Stačí vyplnit základní
-                    údaje a přiložit soubor. Vaše dokumenty projdu osobně a na
-                    rovinu vám řeknu, zda máte férové podmínky.
+                    údaje a přiložit vyúčtování. Vaše dokumenty projdu osobně a na
+                    rovinu vám řeknu, zda máte férové podmínky. Pokud nemáte
+                    podklady po ruce, můžete mi svůj dotaz poslat přímo na{" "}
+                    <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
+                      info@nepreplacejme.cz
+                    </a>.
                   </p>
                 </div>
 
