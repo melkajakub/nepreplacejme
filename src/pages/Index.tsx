@@ -88,7 +88,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Pomáhám domácnostem, firmám a obcím vyznat se v možnostech na trhu s energiemi. Srovnám nabídky předních dodavatelů, u větších odběrů vyjednám individuální podmínky – bez skrytých háčků a zbytečného papírování.
+              Pomáhám domácnostem, firmám a obcím zorientovat se v možnostech a získat výhodnější ceny energií. Srovnám nabídky, u větších odběrů vyjednám individuální podmínky – bez skrytých poplatků a zbytečného papírování.
             </p>
 
             {/* Audience badges */}
