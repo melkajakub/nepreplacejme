@@ -15,8 +15,6 @@ import {
   Home,
   Building2,
   Landmark,
-  Lock,
-  Scale,
   Handshake,
   Ban,
   FileText,
