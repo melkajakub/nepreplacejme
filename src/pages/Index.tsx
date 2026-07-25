@@ -311,8 +311,8 @@ const Index = () => {
                       desc: "Pro menší firmy vybereme optimální ceník na trhu, pro velké odběry zajišťujeme individuální nabídku navázanou na velkoobchodní trh.",
                     },
                     {
-                      title: "Maximální konkurenceschopnost",
-                      desc: "Díky nízkým režijním nákladům tlačím celkovou výslednou cenu na minimum.",
+                      title: "Maximální cenová efektivita",
+                      desc: "Díky přímočarému přístupu bez zbytečné administrativní zátěže promítám veškeré úspory přímo do vaší finální ceny.",
                     },
                     {
                       title: "Kompletní energetický servis",
