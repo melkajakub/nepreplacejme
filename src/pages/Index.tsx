@@ -43,7 +43,7 @@ const Index = () => {
                 Nepřeplácejme.cz
               </span>
               <span className="text-xs text-muted-foreground truncate">
-                Nezávislý nákup a poradce pro energie
+                Váš nezávislý partner pro nákup a správu energií
               </span>
             </div>
           </div>
