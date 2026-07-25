@@ -302,21 +302,21 @@ const Index = () => {
                   Optimalizace ceníků i individuální velkoobchodní nákup
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Řešení podle velikosti odběru – od optimálního ceníku pro menší firmy až po individuální nákup pro velké odběry.
+                  Řešení na míru podle velikosti odběru – pro menší i velké provozovny.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
                     {
-                      title: "Řešení na míru podle velikosti odběru",
-                      desc: "Pro menší firmy vybereme nejvýhodnější ceník na trhu, pro velké odběry zajišťujeme individuální nákup s návazností na velkoobchodní trh.",
+                      title: "Řešení na míru",
+                      desc: "Pro menší firmy vybereme optimální ceník na trhu, pro velké odběry zajišťujeme individuální nabídku navázanou na velkoobchodní trh.",
                     },
                     {
                       title: "Maximální konkurenceschopnost",
-                      desc: "Díky nízké režii a přímé orientaci na trhu tlačím celkovou cenu na minimum.",
+                      desc: "Díky nízkým režijním nákladům tlačím celkovou výslednou cenu na minimum.",
                     },
                     {
                       title: "Kompletní energetický servis",
-                      desc: "Hlídání konce fixací, kontrola správnosti nastavení a správa administrativy.",
+                      desc: "Hlídání konce fixací, kontrola nastavení parametrů a správcovská administrativa.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
