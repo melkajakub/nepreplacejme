@@ -43,7 +43,7 @@ const Index = () => {
                 Nepřeplácejme.cz
               </span>
               <span className="text-xs text-muted-foreground truncate">
-                Nezávislý nákup a poradce pro energie
+                Váš nezávislý partner pro nákup a správu energií
               </span>
             </div>
           </div>
@@ -474,8 +474,12 @@ const Index = () => {
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
                     Ozvu se vám zpět s konkrétním návrhem. Stačí vyplnit základní
-                    údaje a přiložit soubor. Vaše dokumenty projdu osobně a na
-                    rovinu vám řeknu, zda máte férové podmínky.
+                    údaje a přiložit vyúčtování. Vaše dokumenty projdu osobně a na
+                    rovinu vám řeknu, zda máte férové podmínky. Pokud nemáte
+                    podklady po ruce, můžete mi svůj dotaz poslat přímo na{" "}
+                    <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
+                      info@nepreplacejme.cz
+                    </a>.
                   </p>
                 </div>
 
@@ -490,7 +494,7 @@ const Index = () => {
                   <div>
                     <p className="font-semibold text-foreground">Jakub Melka</p>
                     <p className="text-sm text-muted-foreground">
-                      Nezávislý nákupčí a poradce pro energie
+                      Váš nezávislý partner pro nákup a správu energií
                     </p>
                   </div>
                 </div>
