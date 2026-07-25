@@ -301,24 +301,24 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-3">
-                  Individuální velkoobchodní nákup
+                  Optimalizace ceníků i individuální velkoobchodní nákup
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Řešení na míru pro větší odběry navázané na reálný vývoj trhu.
+                  Řešení podle velikosti odběru – od optimálního ceníku pro menší firmy až po individuální nákup pro velké odběry.
                 </p>
                 <ul className="space-y-3 mb-8">
                   {[
                     {
-                      title: "Přístup k individuálním nabídkám",
-                      desc: "Oslovím klíčové hráče na trhu pro ceny odpovídající aktuálnímu vývoji burzy.",
+                      title: "Řešení na míru podle velikosti odběru",
+                      desc: "Pro menší firmy vybereme nejvýhodnější ceník na trhu, pro velké odběry zajišťujeme individuální nákup s návazností na velkoobchodní trh.",
                     },
                     {
                       title: "Maximální konkurenceschopnost",
-                      desc: "Díky efektivnímu fungování bez zbytečné režie tlačím výslednou cenu na minimum.",
+                      desc: "Díky nízké režii a přímé orientaci na trhu tlačím celkovou cenu na minimum.",
                     },
                     {
                       title: "Kompletní energetický servis",
-                      desc: "Hlídání termínů fixací, kontrola nastavení jističů a správa administrativy.",
+                      desc: "Hlídání konce fixací, kontrola správnosti nastavení a správa administrativy.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
