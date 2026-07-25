@@ -411,12 +411,12 @@ const Index = () => {
                 {
                   icon: ShieldCheck,
                   title: "Spolupráce s lídry trhu",
-                  desc: "Nabízím výhradně dodávky od předních, stabilních a prověřených českých dodavatelů.",
+                  desc: "Nabízím výhradně dodávky od předních, stabilních a licencovaných českých dodavatelů.",
                 },
                 {
                   icon: Handshake,
                   title: "Nezávislý přístup",
-                  desc: "Doporučuji vždy to řešení, které dává největší smysl pro vaše konkrétní odběrné místo.",
+                  desc: "Doporučuji vždy to nastavení, které dává největší smysl pro vaše konkrétní odběrné místo.",
                 },
                 {
                   icon: Ban,
