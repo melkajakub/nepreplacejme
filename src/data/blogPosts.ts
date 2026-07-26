@@ -9,56 +9,31 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "jak-overit-cenu-elektriny-na-burze",
-    title: "Jak si sami ověříte cenu elektřiny na burze? Návod, jak poznat férovou nabídku a kdy fixovat",
+    title: "Jak si ověřit cenu elektřiny na burze a kdy se vyplatí fixovat?",
     excerpt: "Naučte se číst tržní data na burze PXE, odhadnout trend cen a využít setrvačnost ceníků dodavatelů při volbě fixace.",
     date: "2026-04-16",
-    content: `Když vám dodavatel energií pošle novou nabídku, návrh fixace nebo ceník na příští období, většina lidí se podívá jen na měsíční zálohy nebo finální částku za megawatthodinu (MWh). Jenže z čeho se tato cena vlastně skládá? A jak poznat, zda se trh chystá spíše zlevňovat, nebo zdražovat?
+    content: `Chcete vedět, zda je nová nabídka od dodavatele férová, nebo má přestřelenou marži? Odpověď leží na energetické burze, kde nakupují všichni dodavatelé v ČR.
 
-Klíč k odpovídající ceníkové ceně i k odhadu budoucího vývoje leží na energetické burze. Právě tam nakupují elektřinu všichni významní dodavatelé v České republice.
+### 1. Kde sledovat reálné ceny?
 
-Tyto údaje jsou veřejně dostupné a vy si je můžete vyhledat během minuty.
+Aktuální velkoobchodní ceny silové elektřiny na další roky najdete přímo v oficiálním přehledu **[PXE Market Data Hub](https://pxe.cz/cs/derivatovy-trh/market-data-hub)**. Ceny jsou v EUR/MWh – pro hrubý přepočet na CZK stačí násobit kurzovou hodnotou eura (cca 25 Kč).
 
-## Kde sledovat reálná data z trhu?
+### 2. Jak poznat správný moment pro fixaci?
 
-Pro český trh jsou klíčová data z derivátového trhu **PXE (POWER EXCHANGE CENTRAL EUROPE)**. Můžete si je kdykoliv otevřít přímo v jejich oficiálním přehledu:
+Sledovat jen samotný graf burzy nestačí. Ceníky dodavatelů mají **setrvačnost**:
 
-**[Zobrazit aktuální tržní data na PXE Market Data Hub](https://pxe.cz/cs/derivatovy-trh/market-data-hub)**
+- **Když burza klesá:** Vybraní dodavatelé často doprodávají dříve nakoupené zásoby za výhodnější ceny, než kam má burza po svém poklesu namířeno. V takové chvíli dává smysl cenu uzamknout, i když graf mírně klesá.
+- **Když burza roste:** Zafixujte co nejrychleji, než dodavatelé promítnou zdražení do ceníků.
 
-V tomto přehledu uvidíte, za kolik se aktuálně obchoduje čistá silová elektřina na nadcházející roky (např. na příští rok nebo roky následující).
+### 3. Z čeho se skládá konečná cena?
 
-*Poznámka: Ceny na burze se uvádějí v eurech za megawatthodinu (€/MWh). Pro přibližný přepočet na koruny stačí cenu vynásobit aktuálním kurzem eura (např. 25 Kč).*
+K burzovní ceně dodavatel připočítává pouze **svoji marži, náklady na odchylku a 21 % DPH** *(regulovaná platba za distribuci je daná ERÚ a nelze ji ovlivnit)*.
 
-## Jak z burzovních dat poznat trend a zvolit strategii fixace?
+---
 
-Sledování burzy vám nedává jen přehled o dnešní ceně, ale ukazuje především **střednědobý trend**. Stačí se podívat, jak se liší ceny pro různé roky dodávky.
+### Nechce se vám grafy přepočítávat?
 
-Je tu ale jedno velké **ALE**, na které většina zákazníků doplácí: **Ceníky dodavatelů nereagují na burzu okamžitě.** Na trhu funguje určitá setrvačnost.
-
-- **Klesající trend na burze nemusí znamenat nejlevnější ceník:** Pokud burza mírně klesá, lidé mají tendenci čekat a nefixovat. Jenže vybraní dodavatelé často drží skvělé ceníky díky tomu, že nakoupili komoditu s předstihem za velmi výhodné ceny. Pokud takový dodavatel doplňuje zásoby nebo doprodává výhodné nákupy, může vám nabídnout fixovanou cenu, na kterou se burza po svém poklesu možná ani nedostane. V takové situaci dává smysl výhodnou fixaci uzamknout, i když grafy ukazují lehký pokles.
-- **Rostoucí trend (Trh očekává zdražování):** Pokud ceny na vzdálenější roky na burze postupně rostou, trh signalizuje riziko. Zde platí, že čím dříve výhodnou cenu zafixujete, tím více ušetříte, než dodavatelé přecení své nabízené produkty směrem nahoru.
-
-**Pravidlo z praxe:** Sledovat jen samotnou burzu nestačí. Vždy je potřeba porovnat *aktuální burzovní trend* s tím, *za kolik doplňují zásoby konkrétní dodavatelé*. Právě v tomto mezidobí vznikají ty nejvýhodnější nabídky na trhu.
-
-## Z burzy až k vám do zásuvky: Z čeho se skládá výsledná cena?
-
-Burzovní cena představuje čistou surovinovou cenu (tzv. silovou elektřinu). Aby se dostala až k vám do domu, firmy nebo obecní budovy, dodavatel k ní připočítává:
-
-- **Marži dodavatele:** Náklady na provoz, zákaznický servis, administrativu a přiměřený zisk.
-- **Náklady na odchylku:** Riziko spojené s tím, že vaši reálnou spotřebu nelze předem odhadnout na kilowatt přesně.
-- **DPH (21 %):** Zákonná daň z přidané hodnoty.
-
-*(Vedle toho platíte na faktuře ještě regulovanou složku za distribuci a jističe, kterou stanovuje Energetický regulační úřad a žádný dodavatel ji nemůže ovlivnit.)*
-
-## Shrnutí: Jak se rozhodovat s chladnou hlavou?
-
-Před podpisem jakékoliv nové smlouvy si vždy položte dvě základní otázky:
-
-1. **Je nabízená cena férová vůči dnešní burze i historickým nákupům dodavatele?**
-2. **Jaká délka fixace dává smysl vzhledem k trendu trhu a dostupným akčním ceníkům?**
-
-## Nechce se vám burzovní grafy a přehledy studovat?
-
-Rád to udělám za vás. Pošlete mi vaše stávající vyúčtování nebo novou nabídku přes formulář níže. Vaše podklady osobně projdu, porovnám je s aktuálním vývojem na burze a na rovinu vám řeknu, zda máte férové podmínky a jakou strategii se vám vyplatí zvolit.`,
+Pošlete mi vaše vyúčtování přes formulář níže. Podklady osobně porovnám s aktuálním trhem a na rovinu vám řeknu, zda máte férovou cenu.`,
   },
   {
     slug: "uspora-pro-vecerky-bistra-kinh-doanh-tiem-tap-hoa-quan-an",
