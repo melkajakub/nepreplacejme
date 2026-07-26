@@ -9,7 +9,7 @@ export interface BlogPost {
 export const blogPosts: BlogPost[] = [
   {
     slug: "jak-overit-cenu-elektriny-na-burze",
-    title: "Jak si sami ověříte cenu elektřiny na burze? Návod, jak poznat férovou nabídku a kdy fixovat",
+    title: "Jak si ověřit cenu elektřiny na burze a kdy se vyplatí fixovat?",
     excerpt: "Naučte se číst tržní data na burze PXE, odhadnout trend cen a využít setrvačnost ceníků dodavatelů při volbě fixace.",
     date: "2026-04-16",
     content: `Chcete vedět, zda je nová nabídka od dodavatele férová, nebo má přestřelenou marži? Odpověď leží na energetické burze, kde nakupují všichni dodavatelé v ČR.
