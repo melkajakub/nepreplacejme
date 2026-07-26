@@ -77,8 +77,26 @@ const BlogPost = () => {
   };
 
   const renderInline = (text: string) => {
-    const parts = text.split(/(\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*]+\*)/g);
+    const parts = text.split(/(<a\s[^>]*>[^<]+<\/a>|\[[^\]]+\]\([^)]+\)|\*\*[^*]+\*\*|\*[^*]+\*)/g);
     return parts.map((part, i) => {
+      const htmlAnchor = part.match(/^<a\s+([^>]*)>([^<]+)<\/a>$/);
+      if (htmlAnchor) {
+        const attrs = htmlAnchor[1];
+        const label = htmlAnchor[2];
+        const hrefMatch = attrs.match(/href="([^"]+)"/);
+        const classMatch = attrs.match(/class="([^"]+)"/);
+        return (
+          <a
+            key={i}
+            href={hrefMatch ? hrefMatch[1] : "#"}
+            target="_blank"
+            rel="noopener noreferrer"
+            className={classMatch ? classMatch[1] : "text-primary underline hover:text-primary-glow transition-colors"}
+          >
+            {label}
+          </a>
+        );
+      }
       const linkMatch = part.match(/^\[([^\]]+)\]\(([^)]+)\)$/);
       if (linkMatch) {
         return (
