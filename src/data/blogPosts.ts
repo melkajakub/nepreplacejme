@@ -16,7 +16,7 @@ export const blogPosts: BlogPost[] = [
 
 ### 1. Kde sledovat reálné ceny?
 
-Aktuální velkoobchodní ceny silové elektřiny na další roky najdete přímo v oficiálním přehledu **[PXE Market Data Hub](https://pxe.cz/cs/derivatovy-trh/market-data-hub)**. Ceny jsou v EUR/MWh – pro hrubý přepočet na CZK stačí násobit kurzovou hodnotou eura (cca 25 Kč).
+Aktuální velkoobchodní ceny silové elektřiny na další roky najdete přímo v oficiálním přehledu <a href="https://pxe.cz/cs/derivatovy-trh/market-data-hub" target="_blank" rel="noopener noreferrer" class="text-primary underline font-bold">PXE Market Data Hub</a>. Ceny jsou v EUR/MWh – pro hrubý přepočet na CZK stačí násobit kurzovou hodnotou eura (cca 25 Kč).
 
 ### 2. Jak poznat správný moment pro fixaci?
 
