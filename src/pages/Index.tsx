@@ -1,10 +1,7 @@
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import {
-  Send,
-  Mail,
   ShieldCheck,
-  FileCheck,
   Check,
   PhoneOff,
   UserCheck,
@@ -81,18 +78,18 @@ const Index = () => {
 
       <main>
         {/* Hero */}
-        <section className="py-20 md:py-28 px-4">
-          <div className="container mx-auto max-w-5xl text-center space-y-8">
+        <section className="py-16 md:py-24 px-4">
+          <div className="container mx-auto max-w-5xl text-center space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
               Energie pro domov i podnikání. Srozumitelně, férově a bez tlaku.
             </h1>
 
-            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Pomáhám domácnostem, firmám a obcím zorientovat se v možnostech a získat výhodnější ceny energií. Srovnám nabídky, u větších odběrů vyjednám individuální podmínky – bez skrytých poplatků a zbytečného papírování.
+            <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
+              Pomáhám domácnostem, firmám a obcím zorientovat se v možnostech a získat výhodnější ceny energií. Srovnám nabídky, u větších odběrů vyjednám individuální podmínky – bez skrytých poplatků.
             </p>
 
             {/* Audience badges */}
-            <div className="flex flex-wrap justify-center gap-3 pt-2">
+            <div className="flex flex-wrap justify-center gap-3">
               {[
                 { icon: Home, label: "Pro domácnosti" },
                 { icon: Building2, label: "Pro firmy a podnikatele" },
@@ -109,26 +106,26 @@ const Index = () => {
             </div>
 
             {/* Social proof row */}
-            <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-3 pt-2 text-sm md:text-base text-muted-foreground">
+            <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>100% nezávislé posouzení (jsem váš průvodce, nic nepodepisuji za vás)</span>
+                <span>Osobní posouzení, nic nepodepisuji za vás</span>
               </li>
               <li className="flex items-center gap-2">
                 <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Žádný nátlak a otravné telefonáty z call center</span>
+                <span>Žádná call centra ani otravné telefonáty</span>
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Většinou vám dokážu nabídnout výhodnější podmínky u známých velkých dodavatelů, než jaké máte teď</span>
+                <span>Podmínky u ověřených českých dodavatelů</span>
               </li>
             </ul>
 
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
               <Button
                 variant="default"
                 size="lg"
-                className="text-base px-8 py-6 w-full sm:w-auto"
+                className="text-base px-8 w-full sm:w-auto"
                 asChild
               >
                 <a href="#domacnosti">
@@ -139,7 +136,7 @@ const Index = () => {
               <Button
                 variant="outline"
                 size="lg"
-                className="text-base px-8 py-6 w-full sm:w-auto"
+                className="text-base px-8 w-full sm:w-auto"
                 asChild
               >
                 <a href="#firmy">
@@ -150,7 +147,7 @@ const Index = () => {
             </div>
 
             {/* Three paths cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6 pt-10 md:pt-14 text-left">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 md:pt-14 text-left">
               {[
                 {
                   icon: FileSearch,
@@ -160,21 +157,21 @@ const Index = () => {
                 {
                   icon: KeyRound,
                   title: "Koupil jsem nemovitost / Řeším přepis",
-                  desc: "Provedu vás celým procesem přepisu energií na nové jméno. Připravím pro vás ty nejvýhodnější podmínky a pohlídám, ať nic nepodepíšete špatně.",
+                  desc: "Provedu vás celým procesem přepisu energií na nové jméno a připravím pro vás výhodné podmínky u nového dodavatele.",
                 },
                 {
                   icon: HardHat,
                   title: "Stavím dům / Nové odběrné místo",
-                  desc: "Potřebujete novou přípojku, sloupek nebo elektroměr? Pomohu vám s celým postupem od nuly a navedu vás, jak hladce získat smlouvu s distributorem.",
+                  desc: "Potřebujete novou přípojku, sloupek nebo elektroměr? Pomohu vám s celým postupem od nuly až po smlouvu s distributorem.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <a
                   key={title}
                   href="#formular"
-                  className="group flex flex-col gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-glow hover:border-primary/40 transition-all"
+                  className="group flex flex-col h-full gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
                 >
-                  <div className="w-12 h-12 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon className="h-6 w-6 text-primary" />
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon className="h-5 w-5 text-primary" />
                   </div>
                   <h3 className="text-lg font-semibold text-foreground leading-snug">
                     {title}
@@ -192,14 +189,14 @@ const Index = () => {
 
             {/* Low consumption callout */}
             <div className="mt-10 md:mt-14 max-w-3xl mx-auto text-left">
-              <div className="relative p-6 md:p-8 rounded-xl bg-primary/5 border border-primary/15 shadow-sm overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-primary/30" />
-                <div className="relative space-y-3">
-                  <h3 className="text-lg md:text-xl font-bold text-foreground leading-snug">
-                    Máte byt s malou spotřebou? I tak můžete přeplácet tisíce!
+              <div className="relative p-6 md:p-7 rounded-xl bg-muted/50 border border-border overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary/40" />
+                <div className="relative space-y-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground leading-snug">
+                    Máte byt s malou spotřebou? I tak můžete přeplácet tisíce.
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Spousta lidí v bytech si myslí, že při nízké spotřebě nemá smysl faktury řešit. Opak je pravdou. Velmi často narážím na špatně nastavenou distribuční sazbu a zároveň zbytečně vysokou cenu. Při této kombinaci vám dokážu ušetřit až 2 000 Kč ročně, přestože proudem nijak neplýtváte. Nechte mě vaše fixní platby prověřit.
+                    Spousta lidí v bytech si myslí, že při nízké spotřebě nemá smysl faktury řešit. Opak je pravdou – často narážím na špatně nastavenou distribuční sazbu v kombinaci s vysokou cenou. I tady dokážu ušetřit až 2 000 Kč ročně, přestože proudem nijak neplýtváte.
                   </p>
                 </div>
               </div>
@@ -210,17 +207,17 @@ const Index = () => {
         {/* Trust banner - role clarification */}
         <section className="px-4 pb-4">
           <div className="container mx-auto max-w-5xl">
-            <div className="rounded-2xl bg-primary text-primary-foreground p-6 md:p-10 shadow-glow">
+            <div className="rounded-2xl bg-primary text-primary-foreground p-6 md:p-8 shadow-soft">
               <div className="flex flex-col md:flex-row md:items-start gap-5">
                 <div className="shrink-0 w-12 h-12 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center">
                   <Handshake className="h-6 w-6 text-primary-foreground" />
                 </div>
-                <div className="space-y-3">
+                <div className="space-y-2">
                   <h2 className="text-xl md:text-2xl font-bold leading-snug">
                     Nejsem dodavatel energií. Jsem váš nezávislý partner pro jejich nákup.
                   </h2>
                   <p className="text-sm md:text-base leading-relaxed text-primary-foreground/85">
-                    Smlouvu o dodávkách vždy podepisujete přímo s prověřenými a stabilními dodavateli na českém trhu. Mým úkolem je vyjednat pro vás u těchto firem ty nejlepší možné podmínky, pohlídat smlouvy a ušetřit vám čas i peníze.
+                    Smlouvu o dodávkách vždy podepisujete přímo s prověřeným dodavatelem. Mým úkolem je vyjednat pro vás nejlepší možné podmínky a ušetřit vám čas i peníze.
                   </p>
                 </div>
               </div>
@@ -231,15 +228,23 @@ const Index = () => {
         {/* Dual offering - B2C & B2B */}
         <section className="py-16 md:py-20 px-4">
           <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-12 space-y-3 max-w-2xl mx-auto">
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Komu pomáhám
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Dvě odlišné cesty podle toho, jestli řešíte energie pro domov nebo pro provoz firmy či obce.
+              </p>
+            </div>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
               {/* B2C */}
               <div
                 id="domacnosti"
-                className="flex flex-col p-8 md:p-10 rounded-xl bg-background border border-border shadow-sm scroll-mt-24"
+                className="flex flex-col p-8 rounded-xl bg-background border border-border shadow-sm scroll-mt-24"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Home className="h-7 w-7 text-primary" />
-                  <span className="text-sm font-medium uppercase tracking-wide text-primary/80">
+                  <Home className="h-6 w-6 text-primary" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary/80">
                     Pro domácnosti
                   </span>
                 </div>
@@ -247,13 +252,13 @@ const Index = () => {
                   Klid a jistota pro váš domov
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Nezávislé srovnání ceníků a výběr férového řešení od prověřených českých dodavatelů.
+                  Srovnání ceníků a výběr férového řešení od prověřených českých dodavatelů.
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {[
                     {
                       title: "Srovnání dostupných ceníků",
-                      desc: "Nezávislý průzkum trhu a výběr spolehlivého partnera s nejvýhodnější cenou.",
+                      desc: "Průzkum trhu a výběr spolehlivého partnera s nejvýhodnější cenou.",
                     },
                     {
                       title: "Srozumitelně a polopatě",
@@ -261,7 +266,7 @@ const Index = () => {
                     },
                     {
                       title: "Bez starostí",
-                      desc: "Přechod k novému dodavateli i veškeré papírování vyřídím kompletně za vás.",
+                      desc: "Přechod k novému dodavateli i papírování vyřídím kompletně za vás.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
@@ -290,11 +295,11 @@ const Index = () => {
               {/* B2B */}
               <div
                 id="firmy"
-                className="flex flex-col p-8 md:p-10 rounded-xl bg-background border border-border shadow-sm scroll-mt-24"
+                className="flex flex-col p-8 rounded-xl bg-background border border-border shadow-sm scroll-mt-24"
               >
                 <div className="flex items-center gap-3 mb-4">
-                  <Building2 className="h-7 w-7 text-primary" />
-                  <span className="text-sm font-medium uppercase tracking-wide text-primary/80">
+                  <Building2 className="h-6 w-6 text-primary" />
+                  <span className="text-xs font-semibold uppercase tracking-wider text-primary/80">
                     Pro firmy a obce
                   </span>
                 </div>
@@ -304,7 +309,7 @@ const Index = () => {
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Řešení na míru podle velikosti odběru – pro menší i velké provozovny.
                 </p>
-                <ul className="space-y-3 mb-8">
+                <ul className="space-y-3 mb-6">
                   {[
                     {
                       title: "Řešení na míru",
@@ -329,7 +334,7 @@ const Index = () => {
                   ))}
                 </ul>
                 <div className="mt-auto">
-                  <Button asChild variant="outline" className="w-full sm:w-auto">
+                  <Button asChild className="w-full sm:w-auto">
                     <a href="#formular">
                       Poptat B2B řešení
                       <ArrowRight className="ml-2 h-4 w-4" />
@@ -355,7 +360,9 @@ const Index = () => {
                 Čistý a transparentní proces od prvního kontaktu.
               </p>
             </div>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+              {/* connecting line on desktop */}
+              <div className="hidden md:block absolute top-5 left-[16.66%] right-[16.66%] h-px bg-border" aria-hidden="true" />
               {[
                 {
                   step: "1",
@@ -373,17 +380,17 @@ const Index = () => {
                   step: "3",
                   icon: CheckCircle2,
                   title: "Vyberete si a šetříte",
-                  desc: "Pokud se vám nabídka líbí, zařídím veškerou administrativu. Pokud ne, nic se neděje a pokračujete dál.",
+                  desc: "Pokud se vám nabídka líbí, zařídím administrativu. Pokud ne, nic se neděje.",
                 },
               ].map(({ step, icon: Icon, title, desc }) => (
                 <div
                   key={step}
-                  className="relative p-6 md:p-8 rounded-xl bg-background border border-border shadow-sm"
+                  className="relative p-6 rounded-xl bg-background border border-border shadow-sm"
                 >
-                  <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center shadow-glow">
+                  <div className="absolute -top-3 -left-3 w-10 h-10 rounded-full bg-primary text-primary-foreground font-bold flex items-center justify-center shadow-md">
                     {step}
                   </div>
-                  <Icon className="h-7 w-7 text-primary mb-4" />
+                  <Icon className="h-6 w-6 text-primary mb-4 mt-2" />
                   <h3 className="text-lg font-semibold text-foreground mb-2">
                     {title}
                   </h3>
@@ -411,18 +418,18 @@ const Index = () => {
                 },
                 {
                   icon: Handshake,
-                  title: "Nezávislý přístup",
-                  desc: "Doporučuji vždy to nastavení, které dává největší smysl pro vaše konkrétní odběrné místo.",
+                  title: "Řešení podle vašich čísel",
+                  desc: "Doporučuji nastavení, které dává největší smysl pro vaše konkrétní odběrné místo.",
                 },
                 {
                   icon: Ban,
-                  title: "Nulový nátlak",
-                  desc: "Rozhodnutí je vždy 100 % na vás. Žádné vmanipulování do nevýhodných smluv.",
+                  title: "Rozhodnutí necháváme na vás",
+                  desc: "Žádné vmanipulování do nevýhodných smluv – finální slovo máte vždy vy.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
                   key={title}
-                  className="text-center space-y-4 p-6 rounded-lg bg-background border border-border shadow-sm"
+                  className="text-center space-y-3 p-6 rounded-lg bg-background border border-border shadow-sm"
                 >
                   <div className="mx-auto w-14 h-14 rounded-full bg-primary/10 flex items-center justify-center">
                     <Icon className="h-6 w-6 text-primary" />
@@ -445,13 +452,13 @@ const Index = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-foreground text-center mb-8">
               Aktuálně z projektu
             </h2>
-            <div className="rounded-lg border border-border bg-background p-6 md:p-10 space-y-4">
+            <div className="rounded-lg border border-border bg-background p-6 md:p-8 space-y-4">
               <h3 className="text-xl md:text-2xl font-bold text-foreground">
                 Jak pracuji a co ode mě můžete čekat
               </h3>
               <p className="text-muted-foreground leading-relaxed">
                 Většina lidí má energetické poradce spojené s nekonečnými telefonáty
-                a neustálým tlakem na podpis nové smlouvy. Já to dělám jinak. Chci,
+                a tlakem na podpis nové smlouvy. Já to dělám jinak. Chci,
                 abyste od prvního kontaktu věděli, na čem jste – a rozhodnutí
                 nechávám vždy na vás.
               </p>
@@ -463,27 +470,26 @@ const Index = () => {
         </section>
 
         {/* Form section */}
-        <section id="formular" className="py-20 md:py-24 px-4 scroll-mt-24">
+        <section id="formular" className="py-16 md:py-20 px-4 scroll-mt-24">
           <div className="container mx-auto max-w-6xl">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
               {/* Left column: copy + avatar */}
-              <div className="space-y-8">
+              <div className="space-y-6">
                 <div className="space-y-4">
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground">
                     Nezávazná poptávka / Konzultace
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                    Ozvu se vám zpět s konkrétním návrhem. Stačí vyplnit základní
-                    údaje a přiložit vyúčtování. Vaše dokumenty projdu osobně a na
-                    rovinu vám řeknu, zda máte férové podmínky. Pokud nemáte
-                    podklady po ruce, můžete mi svůj dotaz poslat přímo na{" "}
+                    Stačí vyplnit základní údaje a přiložit vyúčtování – ozvu se
+                    vám s konkrétním návrhem. Pokud nemáte podklady po ruce,
+                    napište mi přímo na{" "}
                     <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
                       info@nepreplacejme.cz
                     </a>.
                   </p>
                 </div>
 
-                <div className="flex items-center gap-4 pt-2">
+                <div className="flex items-center gap-4">
                   <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden shrink-0">
                     <img
                       src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
@@ -501,7 +507,7 @@ const Index = () => {
               </div>
 
               {/* Right column: form */}
-              <div className="bg-background border border-border rounded-lg p-4 md:p-6 shadow-sm overflow-hidden">
+              <div className="bg-background border border-border rounded-lg p-2 md:p-4 shadow-sm overflow-hidden">
                 <TallyEmbed />
               </div>
             </div>
@@ -510,62 +516,63 @@ const Index = () => {
       </main>
 
       {/* Footer */}
-      <footer className="border-t border-border py-10 px-4">
-        <div className="container mx-auto max-w-2xl text-center space-y-3">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4">
-            <a
-              href="#domacnosti"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Pro domácnosti
-            </a>
-            <a
-              href="#firmy"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Pro firmy a obce
-            </a>
-            <Link
-              to="/blog"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Blog
-            </Link>
-            <a
-              href="#formular"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Nezávazná konzultace
-            </a>
-            <Link
-              to="/gdpr"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Zásady zpracování osobních údajů (GDPR)
-            </Link>
-          </div>
+      <footer className="border-t border-border py-12 px-4 bg-[hsl(220_20%_98%)]">
+        <div className="container mx-auto max-w-5xl">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
+            {/* Left: nav + contact */}
+            <div className="space-y-4">
+              <div className="flex items-center gap-3">
+                <img
+                  src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
+                  alt="Nepřeplácejme logo"
+                  className="h-8 w-auto rounded-full"
+                  width="32"
+                  height="32"
+                />
+                <span className="font-semibold text-foreground">Nepřeplácejme.cz</span>
+              </div>
+              <nav className="flex flex-wrap gap-x-5 gap-y-2">
+                <a href="#domacnosti" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Pro domácnosti
+                </a>
+                <a href="#firmy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Pro firmy a obce
+                </a>
+                <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Blog
+                </Link>
+                <a href="#formular" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  Konzultace
+                </a>
+                <Link to="/gdpr" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+                  GDPR
+                </Link>
+              </nav>
+              <p className="text-sm text-muted-foreground">
+                Jakub Melka · IČO: 22516280 ·{" "}
+                <a href="mailto:info@nepreplacejme.cz" className="hover:text-foreground transition-colors">
+                  info@nepreplacejme.cz
+                </a>
+              </p>
+            </div>
 
-          <p className="text-sm text-muted-foreground">
-            Nepřeplácejme · Jakub Melka · IČO: 22516280 ·{" "}
-            <a href="mailto:info@nepreplacejme.cz" className="hover:text-foreground transition-colors">
-              info@nepreplacejme.cz
-            </a>
-          </p>
-          <p className="text-xs text-muted-foreground/70 max-w-lg mx-auto leading-relaxed">
-            Nejsem dodavatel energií – jsem nezávislý zprostředkovatel a poradce.
-            Smlouvu vždy podepisujete přímo s vybraným licencovaným dodavatelem.
-            Odesláním formuláře nedochází k uzavření smlouvy ani k zahájení
-            zprostředkovatelské činnosti. Jedná se o nezávaznou konzultaci.
-          </p>
-          <p className="text-xs text-muted-foreground/60 max-w-lg mx-auto leading-relaxed mt-3">
-            Analýzu podmínek a zprostředkování služeb provádí Jakub Melka jako
-            obchodní zástupce společnosti IKAS GROUP s.r.o. (zapsané v registru
-            zprostředkovatelů Energetického regulačního úřadu pod číslem
-            742543078).
-          </p>
-          <p className="text-xs text-muted-foreground/60">
-            © {new Date().getFullYear()}
-          </p>
+            {/* Right: legal */}
+            <div className="md:border-l md:border-border md:pl-8 space-y-3">
+              <p className="text-xs text-muted-foreground/80 leading-relaxed">
+                Nejsem dodavatel energií – jsem nezávislý zprostředkovatel a poradce.
+                Smlouvu vždy podepisujete přímo s vybraným licencovaným dodavatelem.
+                Odesláním formuláře nedochází k uzavření smlouvy; jedná se o nezávaznou konzultaci.
+              </p>
+              <p className="text-xs text-muted-foreground/70 leading-relaxed">
+                Analýzu podmínek a zprostředkování služeb provádí Jakub Melka jako
+                obchodní zástupce společnosti IKAS GROUP s.r.o. (zapsané v registru
+                zprostředkovatelů Energetického regulačního úřadu pod číslem 742543078).
+              </p>
+              <p className="text-xs text-muted-foreground/60 pt-2">
+                © {new Date().getFullYear()} Nepřeplácejme.cz
+              </p>
+            </div>
+          </div>
         </div>
       </footer>
     </div>
