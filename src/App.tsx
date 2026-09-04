@@ -10,6 +10,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Gdpr from "./pages/Gdpr";
 import NotFound from "./pages/NotFound";
+import Sharing from "./pages/Sharing";
 
 
 const queryClient = new QueryClient();
@@ -37,6 +38,7 @@ const App = () => {
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/gdpr" element={<Gdpr />} />
             <Route path="/ochrana-osobnich-udaju" element={<Gdpr />} />
+            <Route path="/sdileni-elektriny" element={<Sharing />} />
             <Route path="*" element={<NotFound />} />
 
           </Routes>

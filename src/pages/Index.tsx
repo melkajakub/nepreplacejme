@@ -17,64 +17,20 @@ import {
   FileText,
   BarChart3,
   CheckCircle2,
+  Sun,
+  PlugZap,
+  Network,
 } from "lucide-react";
 
 import { TallyEmbed } from "@/components/TallyEmbed";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
+import { captureEvent } from "@/lib/posthog";
 
 const Index = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center gap-4">
-          <div className="flex items-center gap-3 min-w-0">
-            <img
-              src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-              alt="Nepřeplácejme logo"
-              className="h-10 w-auto rounded-full shrink-0"
-              width="40"
-              height="40"
-            />
-            <div className="hidden sm:flex flex-col leading-tight min-w-0">
-              <span className="font-semibold text-foreground text-lg">
-                Nepřeplácejme.cz
-              </span>
-              <span className="text-xs text-muted-foreground truncate">
-                Váš nezávislý partner pro nákup a správu energií
-              </span>
-            </div>
-          </div>
-          <nav className="flex items-center gap-4 md:gap-6">
-            <a
-              href="#domacnosti"
-              className="hidden md:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Pro domácnosti
-            </a>
-            <a
-              href="#firmy"
-              className="hidden md:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Pro firmy a obce
-            </a>
-            <a
-              href="#jak-to-funguje"
-              className="hidden lg:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Jak to funguje
-            </a>
-            <Link
-              to="/blog"
-              className="text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Blog
-            </Link>
-            <Button asChild size="sm" className="hidden sm:inline-flex">
-              <a href="#formular">Nezávazná konzultace</a>
-            </Button>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main>
         {/* Hero */}
@@ -86,6 +42,10 @@ const Index = () => {
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
               Pomáhám domácnostem, firmám a obcím zorientovat se v možnostech a získat výhodnější ceny energií. Srovnám nabídky, u větších odběrů vyjednám individuální podmínky – bez skrytých poplatků.
+            </p>
+
+            <p className="text-base text-primary font-medium">
+              Nově pomáhám také s propojením výrobců a odběratelů v rámci sdílení elektřiny.
             </p>
 
             {/* Audience badges */}
@@ -144,6 +104,17 @@ const Index = () => {
                   Poptat nabídku pro firmu / obec
                 </a>
               </Button>
+              <Button
+                variant="ghost"
+                size="lg"
+                className="text-base px-6 w-full sm:w-auto text-primary"
+                asChild
+              >
+                <Link to="/sdileni-elektriny" onClick={() => captureEvent("sharing_cta_clicked", { location: "homepage_hero" })}>
+                  <Network className="mr-2 h-4 w-4" />
+                  Zjistit možnosti sdílení
+                </Link>
+              </Button>
             </div>
 
             {/* Three paths cards */}
@@ -201,6 +172,65 @@ const Index = () => {
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* Energy sharing */}
+        <section className="py-16 md:py-20 px-4 bg-[hsl(220_20%_98%)]">
+          <div className="container mx-auto max-w-6xl">
+            <div className="text-center mb-10 space-y-3 max-w-3xl mx-auto">
+              <span className="text-xs font-semibold uppercase tracking-wider text-primary">Sdílení elektřiny</span>
+              <h2 className="text-2xl md:text-3xl font-bold text-foreground">
+                Elektřinu už nemusíte jen nakupovat nebo prodávat
+              </h2>
+              <p className="text-muted-foreground leading-relaxed">
+                Pomohu posoudit možnosti, získat potřebné podklady a propojit výrobce
+                s vhodnými domácnostmi, firmami nebo obcemi.
+              </p>
+            </div>
+            <div className="grid md:grid-cols-2 gap-6 md:gap-8">
+              <article className="flex flex-col rounded-xl border border-border bg-background p-7 md:p-8 shadow-sm">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  <Sun className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">Mám výrobnu elektřiny</h3>
+                <p className="text-muted-foreground leading-relaxed mb-5">
+                  Máte fotovoltaickou elektrárnu, bioplynovou stanici nebo jiný zdroj?
+                  Prověřím možnosti lepšího využití volné výroby a pomohu najít odběratele.
+                </p>
+                <ul className="space-y-3 mb-6 text-sm text-muted-foreground">
+                  {["Odběratele nemusíte hledat sami", "Posouzení skutečné výroby a přetoků", "Koordinace dalšího postupu"].map((item) => (
+                    <li key={item} className="flex gap-3"><Check className="h-5 w-5 text-primary shrink-0" />{item}</li>
+                  ))}
+                </ul>
+                <Button asChild className="mt-auto w-full sm:w-fit">
+                  <Link to="/sdileni-elektriny#vyrobce" onClick={() => captureEvent("sharing_role_selected", { role: "producer", location: "homepage" })}>Chci nabídnout výrobu<ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </article>
+
+              <article className="flex flex-col rounded-xl border border-border bg-background p-7 md:p-8 shadow-sm">
+                <div className="h-12 w-12 rounded-lg bg-primary/10 flex items-center justify-center mb-5">
+                  <PlugZap className="h-6 w-6 text-primary" />
+                </div>
+                <h3 className="text-xl md:text-2xl font-bold text-foreground mb-3">Chci sdílenou elektřinu odebírat</h3>
+                <p className="text-muted-foreground leading-relaxed mb-5">
+                  Jste domácnost, firma nebo obec? Prověřím váš odběrový profil
+                  a možnost pokrýt část spotřeby elektřinou od zapojeného výrobce.
+                </p>
+                <ul className="space-y-3 mb-6 text-sm text-muted-foreground">
+                  {["Běžná dodávka dál kryje zbytek spotřeby", "Posouzení časového průběhu odběru", "Předem známé podmínky zapojení"].map((item) => (
+                    <li key={item} className="flex gap-3"><Check className="h-5 w-5 text-primary shrink-0" />{item}</li>
+                  ))}
+                </ul>
+                <Button asChild variant="outline" className="mt-auto w-full sm:w-fit">
+                  <Link to="/sdileni-elektriny#odberatel" onClick={() => captureEvent("sharing_role_selected", { role: "consumer", location: "homepage" })}>Chci sdílenou elektřinu<ArrowRight className="ml-2 h-4 w-4" /></Link>
+                </Button>
+              </article>
+            </div>
+            <p className="text-xs text-muted-foreground text-center leading-relaxed mt-6 max-w-3xl mx-auto">
+              Sdílení se vyhodnocuje podle skutečné výroby a spotřeby v jednotlivých
+              časových intervalech. Nelze proto předem slíbit pokrytí celé spotřeby.
+            </p>
           </div>
         </section>
 
@@ -515,66 +545,7 @@ const Index = () => {
         </section>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-12 px-4 bg-[hsl(220_20%_98%)]">
-        <div className="container mx-auto max-w-5xl">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12">
-            {/* Left: nav + contact */}
-            <div className="space-y-4">
-              <div className="flex items-center gap-3">
-                <img
-                  src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-                  alt="Nepřeplácejme logo"
-                  className="h-8 w-auto rounded-full"
-                  width="32"
-                  height="32"
-                />
-                <span className="font-semibold text-foreground">Nepřeplácejme.cz</span>
-              </div>
-              <nav className="flex flex-wrap gap-x-5 gap-y-2">
-                <a href="#domacnosti" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Pro domácnosti
-                </a>
-                <a href="#firmy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Pro firmy a obce
-                </a>
-                <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Blog
-                </Link>
-                <a href="#formular" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  Konzultace
-                </a>
-                <Link to="/gdpr" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-                  GDPR
-                </Link>
-              </nav>
-              <p className="text-sm text-muted-foreground">
-                Jakub Melka · IČO: 22516280 ·{" "}
-                <a href="mailto:info@nepreplacejme.cz" className="hover:text-foreground transition-colors">
-                  info@nepreplacejme.cz
-                </a>
-              </p>
-            </div>
-
-            {/* Right: legal */}
-            <div className="md:border-l md:border-border md:pl-8 space-y-3">
-              <p className="text-xs text-muted-foreground/80 leading-relaxed">
-                Nejsem dodavatel energií – jsem nezávislý zprostředkovatel a poradce.
-                Smlouvu vždy podepisujete přímo s vybraným licencovaným dodavatelem.
-                Odesláním formuláře nedochází k uzavření smlouvy; jedná se o nezávaznou konzultaci.
-              </p>
-              <p className="text-xs text-muted-foreground/70 leading-relaxed">
-                Analýzu podmínek a zprostředkování služeb provádí Jakub Melka jako
-                obchodní zástupce společnosti IKAS GROUP s.r.o. (zapsané v registru
-                zprostředkovatelů Energetického regulačního úřadu pod číslem 742543078).
-              </p>
-              <p className="text-xs text-muted-foreground/60 pt-2">
-                © {new Date().getFullYear()} Nepřeplácejme.cz
-              </p>
-            </div>
-          </div>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 };

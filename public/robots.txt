@@ -1,5 +1,5 @@
-# Společně levněji - Hlídání cen energií
-# Robots.txt pro spolecnelevneji.cz
+# Nepřeplácejme.cz - nákup, správa a sdílení energií
+# Robots.txt pro nepreplacejme.cz
 
 User-agent: *
 Allow: /
@@ -26,7 +26,7 @@ User-agent: facebookexternalhit
 Allow: /
 
 # Sitemap
-Sitemap: https://spolecnelevneji.cz/sitemap.xml
+Sitemap: https://nepreplacejme.cz/sitemap.xml
 
 # Crawl-delay
 Crawl-delay: 1

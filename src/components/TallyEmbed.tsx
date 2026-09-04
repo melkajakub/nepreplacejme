@@ -1,4 +1,5 @@
 import { useEffect } from "react";
+import { captureEvent } from "@/lib/posthog";
 
 declare global {
   interface Window {
@@ -7,7 +8,11 @@ declare global {
   }
 }
 
-export const TallyEmbed = () => {
+type TallyEmbedProps = {
+  context?: "general" | "sharing";
+};
+
+export const TallyEmbed = ({ context = "general" }: TallyEmbedProps) => {
   useEffect(() => {
     const src = "https://tally.so/widgets/embed.js";
     const load = () => window.Tally?.loadEmbeds();
@@ -29,21 +34,22 @@ export const TallyEmbed = () => {
       window.gtag?.("event", "conversion", {
         send_to: "AW-18205815889/SUBMIT_LEAD_FORM",
       });
+      captureEvent("lead_form_submitted", { context });
     };
     window.addEventListener("message", onMessage);
     return () => window.removeEventListener("message", onMessage);
-  }, []);
+  }, [context]);
 
   return (
     <iframe
-      data-tally-src="https://tally.so/embed/KYJ8zD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1"
+      data-tally-src={`https://tally.so/embed/KYJ8zD?alignLeft=1&hideTitle=1&transparentBackground=1&dynamicHeight=1&utm_source=nepreplacejme.cz&utm_content=${context}`}
       loading="lazy"
       width="100%"
       height="648"
       frameBorder={0}
       marginHeight={0}
       marginWidth={0}
-      title="Nepřeplácejme – kontrola faktury"
+      title={context === "sharing" ? "Nepřeplácejme – poptávka sdílení elektřiny" : "Nepřeplácejme – kontrola faktury"}
       style={{ border: 0, display: "block", width: "100%", touchAction: "pan-y" }}
     />
   );

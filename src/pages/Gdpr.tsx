@@ -1,4 +1,5 @@
-import { Link } from "react-router-dom";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const Section = ({
   title,
@@ -26,37 +27,7 @@ const Bullets = ({ items }: { items: React.ReactNode[] }) => (
 const Gdpr = () => {
   return (
     <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-              alt="Nepřeplácejme logo"
-              className="h-10 w-auto rounded-full"
-              width="40"
-              height="40"
-            />
-            <span className="font-semibold text-foreground text-lg hidden sm:inline">
-              Nepřeplácejme
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link
-              to="/blog"
-              className="text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/#formular"
-              className="text-sm font-medium text-primary hover:text-primary-glow transition-colors"
-            >
-              Poslat vyúčtování
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="py-12 md:py-20 px-4">
         <article className="container mx-auto max-w-3xl space-y-10">
@@ -281,41 +252,7 @@ const Gdpr = () => {
         </article>
       </main>
 
-      {/* Footer */}
-      <footer className="border-t border-border py-10 px-4">
-        <div className="container mx-auto max-w-2xl text-center space-y-3">
-          <div className="flex flex-wrap justify-center gap-x-6 gap-y-2 mb-4">
-            <Link
-              to="/blog"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Blog
-            </Link>
-            <Link
-              to="/#formular"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Poslat vyúčtování
-            </Link>
-            <Link
-              to="/gdpr"
-              className="text-sm text-muted-foreground hover:text-foreground transition-colors"
-            >
-              Zásady zpracování osobních údajů (GDPR)
-            </Link>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            Nepřeplácejme · Jakub Melka · IČO: 22516280 ·{" "}
-            <a
-              href="mailto:info@nepreplacejme.cz"
-              className="hover:text-foreground transition-colors"
-            >
-              info@nepreplacejme.cz
-            </a>
-          </p>
-          <p className="text-xs text-muted-foreground/60">© {new Date().getFullYear()}</p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 };
