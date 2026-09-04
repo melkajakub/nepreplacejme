@@ -3,6 +3,8 @@ import { useParams, Link, Navigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft, Upload } from "lucide-react";
+import SiteHeader from "@/components/SiteHeader";
+import SiteFooter from "@/components/SiteFooter";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -133,30 +135,7 @@ const BlogPost = () => {
 
   return (
     <div className="min-h-screen bg-background">
-      <header className="border-b border-border bg-background/80 backdrop-blur-sm sticky top-0 z-50">
-        <div className="container mx-auto px-4 py-4 flex justify-between items-center">
-          <Link to="/" className="flex items-center gap-3">
-            <img
-              src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-              alt="Nepřeplácejme logo"
-              className="h-10 w-auto rounded-full"
-              width="40"
-              height="40"
-            />
-            <span className="font-semibold text-foreground text-lg hidden sm:inline">
-              Nepřeplácejme
-            </span>
-          </Link>
-          <nav className="flex items-center gap-6">
-            <Link to="/blog" className="text-sm font-medium text-primary hover:text-primary-glow transition-colors">
-              Blog
-            </Link>
-            <Link to="/#formular" className="text-sm font-medium text-primary hover:text-primary-glow transition-colors">
-              Poslat vyúčtování
-            </Link>
-          </nav>
-        </div>
-      </header>
+      <SiteHeader />
 
       <main className="py-12 md:py-20 px-4">
         <article className="container mx-auto max-w-2xl">
@@ -235,37 +214,7 @@ const BlogPost = () => {
         </article>
       </main>
 
-      <footer className="border-t border-border py-10 px-4">
-        <div className="container mx-auto max-w-2xl text-center space-y-3">
-          <div className="flex justify-center gap-6 mb-4">
-            <Link to="/blog" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Blog
-            </Link>
-            <Link to="/#formular" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
-              Poslat vyúčtování
-            </Link>
-          </div>
-          <p className="text-sm text-muted-foreground">
-            Nepřeplácejme · Jakub Melka · IČO: 22516280 ·{" "}
-            <a href="mailto:info@nepreplacejme.cz" className="hover:text-foreground transition-colors">
-              info@nepreplacejme.cz
-            </a>
-          </p>
-          <p className="text-xs text-muted-foreground/70 max-w-lg mx-auto leading-relaxed">
-            Odesláním formuláře nedochází k uzavření smlouvy ani k zahájení
-            zprostředkovatelské činnosti. Jedná se o nezávaznou konzultaci.
-          </p>
-          <p className="text-xs text-muted-foreground/60 max-w-lg mx-auto leading-relaxed mt-3">
-            Analýzu faktur a zprostředkování služeb provádí Jakub Melka jako
-            obchodní zástupce společnosti IKAS GROUP s.r.o. (zapsané v registru
-            zprostředkovatelů Energetického regulačního úřadu pod číslem
-            742543078).
-          </p>
-          <p className="text-xs text-muted-foreground/60">
-            © {new Date().getFullYear()}
-          </p>
-        </div>
-      </footer>
+      <SiteFooter />
     </div>
   );
 };
