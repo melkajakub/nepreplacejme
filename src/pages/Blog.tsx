@@ -5,8 +5,16 @@ import { blogPosts } from "@/data/blogPosts";
 import { ArrowRight } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { captureEvent } from "@/lib/posthog";
+import { usePageMeta } from "@/hooks/use-page-meta";
 
 const Blog = () => {
+  usePageMeta(
+    "Rady k cenám elektřiny a plynu | Nepřeplácejme.cz",
+    "Praktické rady k vyúčtování, cenám elektřiny a plynu, fixacím a úsporám pro domácnosti i firmy.",
+    "/blog",
+  );
+
   return (
     <div className="min-h-screen bg-background">
       <SiteHeader />
@@ -51,9 +59,9 @@ const Blog = () => {
               </div>
             </div>
             <Button asChild className="mt-4">
-              <a href="#top" onClick={(e) => { e.preventDefault(); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
+              <Link to="/kontrola-vyuctovani#formular" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "blog_intro" })}>
                 Chci prověřit fakturu v klidu přes e-mail <ArrowRight className="ml-2 h-4 w-4" />
-              </a>
+              </Link>
             </Button>
           </div>
 

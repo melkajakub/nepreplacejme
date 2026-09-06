@@ -22,12 +22,12 @@ export const SiteFooter = () => {
               <span className="font-semibold text-foreground">Nepřeplácejme.cz</span>
             </Link>
             <nav className="flex flex-wrap gap-x-5 gap-y-2" aria-label="Navigace v zápatí">
-              <a href={homeAnchor("#domacnosti", isHome)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              <Link to="/kontrola-vyuctovani" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Pro domácnosti
-              </a>
-              <a href={homeAnchor("#firmy", isHome)} className="text-sm text-muted-foreground hover:text-foreground transition-colors">
+              </Link>
+              <Link to="/energie-pro-firmy" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Pro firmy a obce
-              </a>
+              </Link>
               <Link to="/sdileni-elektriny" className="text-sm text-muted-foreground hover:text-foreground transition-colors">
                 Sdílení elektřiny
               </Link>
@@ -51,9 +51,14 @@ export const SiteFooter = () => {
 
           <div className="md:border-l md:border-border md:pl-8 space-y-3">
             <p className="text-xs text-muted-foreground/80 leading-relaxed">
-              Nejsem dodavatel energií – jsem nezávislý zprostředkovatel a poradce.
+              Nejsem dodavatel energií – jsem energetický zprostředkovatel a poradce.
               Smlouvu vždy podepisujete přímo s vybraným licencovaným dodavatelem
               nebo odborným partnerem. Odesláním formuláře nedochází k uzavření smlouvy.
+            </p>
+            <p className="text-xs text-muted-foreground/80 leading-relaxed">
+              Klient mi za kontrolu ani sjednání nic neplatí. Při uzavření smlouvy
+              dostávám provizi od dodavatele; u sdílení podíl z rozdílu mezi cenou
+              pro výrobce a odběratele.
             </p>
             <p className="text-xs text-muted-foreground/70 leading-relaxed">
               Analýzu podmínek a zprostředkování služeb provádí Jakub Melka jako

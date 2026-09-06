@@ -5,6 +5,7 @@ import { blogPosts } from "@/data/blogPosts";
 import { ArrowLeft, Upload } from "lucide-react";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import { captureEvent } from "@/lib/posthog";
 
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -19,9 +20,23 @@ const BlogPost = () => {
       document.title = `${post.title} | Nepřeplácejme.cz`;
       const metaDesc = document.querySelector('meta[name="description"]');
       if (metaDesc) metaDesc.setAttribute("content", post.excerpt);
+      const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+      if (canonical) canonical.href = `https://nepreplacejme.cz/blog/${post.slug}`;
+      const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+      if (ogUrl) ogUrl.content = `https://nepreplacejme.cz/blog/${post.slug}`;
+      const ogTitle = document.querySelector<HTMLMetaElement>('meta[property="og:title"]');
+      if (ogTitle) ogTitle.content = `${post.title} | Nepřeplácejme.cz`;
+      const ogDescription = document.querySelector<HTMLMetaElement>('meta[property="og:description"]');
+      if (ogDescription) ogDescription.content = post.excerpt;
     }
     return () => {
-      document.title = "Nepřeplácejme.cz | Kontrola a úspora na energiích";
+      document.title = "Kontrola vyúčtování a úspora energií zdarma | Nepřeplácejme.cz";
+      const metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
+      if (metaDesc) metaDesc.content = "Zdarma prověřím cenu, smlouvu i distribuční sazbu elektřiny a plynu. Řešení pro domácnosti, firmy, obce i sdílení elektřiny.";
+      const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
+      if (canonical) canonical.href = "https://nepreplacejme.cz/";
+      const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
+      if (ogUrl) ogUrl.content = "https://nepreplacejme.cz/";
     };
   }, [post]);
 
@@ -128,9 +143,7 @@ const BlogPost = () => {
   };
 
   const handleCtaClick = () => {
-    if (typeof (window as any).posthog !== "undefined") {
-      (window as any).posthog.capture("invoice_upload_started", { source: "blog_post", slug });
-    }
+    captureEvent("invoice_upload_started", { source: "blog_post", slug });
   };
 
   return (
@@ -185,7 +198,7 @@ const BlogPost = () => {
                   NAHRÁT FAKTURU / TẢI HÓA ĐƠN LÊN
                 </a>
               ) : (
-                <Link to="/#formular" onClick={handleCtaClick}>
+                <Link to="/kontrola-vyuctovani#formular" onClick={handleCtaClick}>
                   <Upload className="mr-2 h-4 w-4 shrink-0" />
                   NAHRÁT VYÚČTOVÁNÍ KE KONTROLE
                 </Link>

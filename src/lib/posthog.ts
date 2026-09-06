@@ -3,11 +3,13 @@ declare global {
     posthog?: {
       capture: (event: string, properties?: Record<string, unknown>) => void;
     };
+    gtag?: (...args: unknown[]) => void;
   }
 }
 
 export const captureEvent = (event: string, properties?: Record<string, unknown>) => {
   window.posthog?.capture(event, properties);
+  window.gtag?.("event", event, properties);
 };
 
 export const initPostHog = () => {

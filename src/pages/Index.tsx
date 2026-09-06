@@ -25,6 +25,8 @@ import {
 import { TallyEmbed } from "@/components/TallyEmbed";
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
+import ClientResults from "@/components/ClientResults";
+import TransparentPricing from "@/components/TransparentPricing";
 import { captureEvent } from "@/lib/posthog";
 
 const Index = () => {
@@ -37,15 +39,15 @@ const Index = () => {
         <section className="py-16 md:py-24 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Energie pro domov i podnikání. Srozumitelně, férově a bez tlaku.
+              Pošlete vyúčtování. Zjistím, jestli za energie zbytečně nepřeplácíte.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Pomáhám domácnostem, firmám a obcím zorientovat se v možnostech a získat výhodnější ceny energií. Srovnám nabídky, u větších odběrů vyjednám individuální podmínky – bez skrytých poplatků.
+              Osobně prověřím cenu, smlouvu i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. Pokud jsou vaše podmínky dobré, doporučím vám nic neměnit.
             </p>
 
             <p className="text-base text-primary font-medium">
-              Nově pomáhám také s propojením výrobců a odběratelů v rámci sdílení elektřiny.
+              Kontrola i sjednání jsou pro vás zdarma. Odměnu dostávám od dodavatele.
             </p>
 
             {/* Audience badges */}
@@ -69,7 +71,7 @@ const Index = () => {
             <ul className="flex flex-col sm:flex-row sm:flex-wrap items-center justify-center gap-x-8 gap-y-2 text-sm text-muted-foreground">
               <li className="flex items-center gap-2">
                 <Check className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Osobní posouzení, nic nepodepisuji za vás</span>
+                <span>Osobní posouzení vašich podkladů</span>
               </li>
               <li className="flex items-center gap-2">
                 <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
@@ -88,10 +90,10 @@ const Index = () => {
                 className="text-base px-8 w-full sm:w-auto"
                 asChild
               >
-                <a href="#domacnosti">
+                <Link to="/kontrola-vyuctovani" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "homepage_hero" })}>
                   <Home className="mr-2 h-4 w-4" />
-                  Chci řešení pro domácnost
-                </a>
+                  Zkontrolovat vyúčtování zdarma
+                </Link>
               </Button>
               <Button
                 variant="outline"
@@ -99,10 +101,10 @@ const Index = () => {
                 className="text-base px-8 w-full sm:w-auto"
                 asChild
               >
-                <a href="#firmy">
+                <Link to="/energie-pro-firmy" onClick={() => captureEvent("business_cta_clicked", { location: "homepage_hero" })}>
                   <Building2 className="mr-2 h-4 w-4" />
-                  Poptat nabídku pro firmu / obec
-                </a>
+                  Řešení pro firmu / obec
+                </Link>
               </Button>
               <Button
                 variant="ghost"
@@ -139,6 +141,7 @@ const Index = () => {
                 <a
                   key={title}
                   href="#formular"
+                  onClick={() => captureEvent("service_path_clicked", { service: title })}
                   className="group flex flex-col h-full gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
                 >
                   <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
@@ -174,6 +177,8 @@ const Index = () => {
             </div>
           </div>
         </section>
+
+        <ClientResults compact />
 
         {/* Energy sharing */}
         <section className="py-16 md:py-20 px-4 bg-[hsl(220_20%_98%)]">
@@ -231,27 +236,6 @@ const Index = () => {
               Sdílení se vyhodnocuje podle skutečné výroby a spotřeby v jednotlivých
               časových intervalech. Nelze proto předem slíbit pokrytí celé spotřeby.
             </p>
-          </div>
-        </section>
-
-        {/* Trust banner - role clarification */}
-        <section className="px-4 pb-4">
-          <div className="container mx-auto max-w-5xl">
-            <div className="rounded-2xl bg-primary text-primary-foreground p-6 md:p-8 shadow-soft">
-              <div className="flex flex-col md:flex-row md:items-start gap-5">
-                <div className="shrink-0 w-12 h-12 rounded-full bg-primary-foreground/10 border border-primary-foreground/20 flex items-center justify-center">
-                  <Handshake className="h-6 w-6 text-primary-foreground" />
-                </div>
-                <div className="space-y-2">
-                  <h2 className="text-xl md:text-2xl font-bold leading-snug">
-                    Nejsem dodavatel energií. Jsem váš nezávislý partner pro jejich nákup.
-                  </h2>
-                  <p className="text-sm md:text-base leading-relaxed text-primary-foreground/85">
-                    Smlouvu o dodávkách vždy podepisujete přímo s prověřeným dodavatelem. Mým úkolem je vyjednat pro vás nejlepší možné podmínky a ušetřit vám čas i peníze.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -314,10 +298,10 @@ const Index = () => {
                 </ul>
                 <div className="mt-auto">
                   <Button asChild className="w-full sm:w-auto">
-                    <a href="#formular">
-                      Nezávazně posoudit smlouvu
+                    <Link to="/kontrola-vyuctovani" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "homepage_audience" })}>
+                      Zkontrolovat vyúčtování zdarma
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
@@ -365,16 +349,18 @@ const Index = () => {
                 </ul>
                 <div className="mt-auto">
                   <Button asChild className="w-full sm:w-auto">
-                    <a href="#formular">
+                    <Link to="/energie-pro-firmy" onClick={() => captureEvent("business_cta_clicked", { location: "homepage_audience" })}>
                       Poptat B2B řešení
                       <ArrowRight className="ml-2 h-4 w-4" />
-                    </a>
+                    </Link>
                   </Button>
                 </div>
               </div>
             </div>
           </div>
         </section>
+
+        <TransparentPricing />
 
         {/* How it works */}
         <section
@@ -507,11 +493,11 @@ const Index = () => {
               <div className="space-y-6">
                 <div className="space-y-4">
                   <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                    Nezávazná poptávka / Konzultace
+                    Bezplatná kontrola / Nezávazná poptávka
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                    Stačí vyplnit základní údaje a přiložit vyúčtování – ozvu se
-                    vám s konkrétním návrhem. Pokud nemáte podklady po ruce,
+                    Stačí vyplnit základní údaje a přiložit vyúčtování. Za kontrolu
+                    ani sjednání mi nic neplatíte. Pokud nemáte podklady po ruce,
                     napište mi přímo na{" "}
                     <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
                       info@nepreplacejme.cz
@@ -523,14 +509,14 @@ const Index = () => {
                   <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden shrink-0">
                     <img
                       src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-                      alt="Jakub Melka"
+                      alt="Logo Nepřeplácejme.cz"
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div>
                     <p className="font-semibold text-foreground">Jakub Melka</p>
                     <p className="text-sm text-muted-foreground">
-                      Váš nezávislý partner pro nákup a správu energií
+                      Osobní pomoc s nákupem a správou energií
                     </p>
                   </div>
                 </div>
