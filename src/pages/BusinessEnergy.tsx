@@ -10,7 +10,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const BusinessEnergy = () => {
   usePageMeta(
     "Elektřina a plyn pro firmy a obce | Nepřeplácejme.cz",
-    "Kontrola smluv, soutěž dodavatelů, individuální nabídky a správa termínů pro firmy, podnikatele a obce. Klient za službu nic neplatí.",
+    "Porovnání cen elektřiny a plynu, individuální nabídky a pomoc s termíny smluv pro firmy a obce. Kontrola vyúčtování je zdarma a nezávazná.",
     "/energie-pro-firmy",
   );
 
@@ -43,7 +43,7 @@ const BusinessEnergy = () => {
                 </Button>
               </div>
               <ul className="mt-7 space-y-2 text-sm text-muted-foreground">
-                {["Služba bez poplatku od klienta", "Jedno i více odběrných míst", "Rozhodnutí a podpis zůstávají na vás"].map((item) => (
+                {["Kontrola vyúčtování zdarma", "Jedno i více odběrných míst", "Nabídky k vašemu posouzení"].map((item) => (
                   <li key={item} className="flex items-center gap-2"><Check className="h-4 w-4 text-primary" />{item}</li>
                 ))}
               </ul>
@@ -54,7 +54,7 @@ const BusinessEnergy = () => {
                 {[
                   { icon: FileSpreadsheet, title: "Kontrola současných smluv", text: "Cena, fixace, prolongace i vhodnost nastavení jednotlivých míst." },
                   { icon: BarChart3, title: "Srovnání a individuální nabídky", text: "Postup odpovídající velikosti a charakteru vašeho odběru." },
-                  { icon: ShieldCheck, title: "Dlouhodobé hlídání", text: "Termíny a trh řešíme včas, ne až po automatickém prodloužení." },
+                  { icon: ShieldCheck, title: "Hlídání termínů", text: "Podle dohody pomohu sledovat konce smluv a připravit podklady pro další období." },
                 ].map(({ icon: Icon, title, text }) => (
                   <div key={title} className="flex gap-4">
                     <div className="h-10 w-10 shrink-0 rounded-lg bg-primary/10 flex items-center justify-center"><Icon className="h-5 w-5 text-primary" /></div>

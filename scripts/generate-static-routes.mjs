@@ -10,17 +10,17 @@ const routes = [
   {
     path: "kontrola-vyuctovani",
     title: "Kontrola vyúčtování elektřiny a plynu zdarma | Nepřeplácejme.cz",
-    description: "Pošlete vyúčtování elektřiny nebo plynu. Zdarma prověřím cenu, smlouvu i distribuční sazbu a řeknu vám, zda má změna smysl.",
+    description: "Z vyúčtování zjistím vaše ceny a spotřebu. Navrhnu další postup, abyste za elektřinu a plyn zbytečně nepřepláceli. Kontrola je zdarma.",
   },
   {
     path: "energie-pro-firmy",
     title: "Elektřina a plyn pro firmy a obce | Nepřeplácejme.cz",
-    description: "Kontrola smluv, individuální nabídky a správa termínů pro firmy, podnikatele a obce. Klient za službu nic neplatí.",
+    description: "Porovnání cen elektřiny a plynu, individuální nabídky a pomoc s termíny smluv pro firmy a obce. Kontrola vyúčtování je zdarma a nezávazná.",
   },
   {
     path: "sdileni-elektriny",
     title: "Sdílení elektřiny pro výrobce i odběratele | Nepřeplácejme.cz",
-    description: "Propojení výrobců elektřiny s domácnostmi, firmami a obcemi. Prověření výroby, spotřeby a zajištění dalšího postupu.",
+    description: "Propojení výrobců elektřiny s domácnostmi, firmami a obcemi. Posouzení výroby, spotřeby a možností zapojení do sdílení.",
   },
   {
     path: "blog",
@@ -29,33 +29,33 @@ const routes = [
   },
   {
     path: "blog/jak-overit-cenu-elektriny-na-burze",
-    title: "Jak si ověřit cenu elektřiny na burze | Nepřeplácejme.cz",
-    description: "Jak číst velkoobchodní ceny elektřiny, posoudit nabídku dodavatele a zvolit vhodný okamžik pro fixaci.",
+    title: "Jak číst cenu elektřiny na burze a rozhodovat se o fixaci | Nepřeplácejme.cz",
+    description: "Burzovní cena je vodítko, ne hotová nabídka pro vaše odběrné místo. Co při porovnání sledovat a proč s fixací nerozhoduje jediný graf.",
   },
   {
     path: "blog/uspora-pro-vecerky-bistra-kinh-doanh-tiem-tap-hoa-quan-an",
-    title: "Úspora elektřiny pro večerky a bistra | Nepřeplácejme.cz",
-    description: "Kontrola ceny elektřiny pro večerky a bistra v češtině a vietnamštině. Praktický příklad a možnost bezplatného posouzení.",
+    title: "Máte večerku nebo bistro? / Bạn đang kinh doanh tiệm tạp hóa hoặc quán ăn? | Nepřeplácejme.cz",
+    description: "Co zkontrolovat v nákladech na elektřinu u prodejny nebo bistra. / Những điểm cần kiểm tra trong chi phí điện của cửa hàng hoặc quán ăn.",
   },
   {
     path: "blog/uspora-pro-firmy-obce-a-zivnostniky",
-    title: "Úspora energií pro firmy, obce a živnostníky | Nepřeplácejme.cz",
-    description: "Kde firmám a obcím vznikají zbytečné náklady na energie a co prověřit ve smlouvě, ceně a distribuční sazbě.",
+    title: "Energie pro firmy a obce: co zkontrolovat ve smlouvách | Nepřeplácejme.cz",
+    description: "Cena za MWh, stálé platby, distribuční sazba a termíny smluv. Základní přehled pro jedno i více odběrných míst.",
   },
   {
     path: "blog/sazba-d02d-zbytecne-draha",
     title: "Máte správně nastavenou distribuční sazbu? | Nepřeplácejme.cz",
-    description: "Nevhodná distribuční sazba může zbytečně zdražovat elektřinu i domácnosti s malou spotřebou. Zjistěte, co zkontrolovat.",
+    description: "U malé spotřeby mohou být důležité i stálé platby. Vhodnost distribuční sazby záleží na odběru, spotřebičích a podmínkách připojení.",
   },
   {
     path: "blog/ceska-pokuta-za-vernost",
-    title: "Proč se věrnost dodavateli energií může prodražit | Nepřeplácejme.cz",
-    description: "Jak automatické prodloužení a staré ceníky zdražují elektřinu a plyn a proč podmínky řešit před koncem fixace.",
+    title: "Věrnost dodavateli energií: kdy znovu porovnat nabídky? | Nepřeplácejme.cz",
+    description: "Před koncem smlouvy porovnejte podmínky dalšího období. Důležitá je cena, délka závazku i pravidla prodloužení.",
   },
   {
     path: "blog/jak-se-vyznat-ve-vyuctovani",
-    title: "Jak se vyznat ve vyúčtování energií | Nepřeplácejme.cz",
-    description: "Jak správně porovnat obchodní cenu, stálý plat a distribuční část vyúčtování elektřiny nebo plynu.",
+    title: "Jak se vyznat ve vyúčtování energií? | Nepřeplácejme.cz",
+    description: "Jak porovnat cenu za MWh, stálé platby a celkové roční náklady. S DPH nebo bez ní, ale vždy na stejném základě.",
   },
   {
     path: "gdpr",

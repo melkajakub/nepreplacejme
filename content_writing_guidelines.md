@@ -1,5 +1,7 @@
 # Návod pro psaní SEO obsahu - Energetický sektor
 
+> Aktualizace 6. 9. 2026: Níže uvedené příklady pocházejí ze starého obchodního modelu. Nepřebírat částku 600 Kč/rok, záruky minimální úspory, poplatky za kontrolu ani nepodložené průměrné výsledky. Kontrola vyúčtování a pomoc se změnou dodavatele jsou pro klienta zdarma. U sdílení nejprve posoudit konkrétní ceny a případné související poplatky. Používat schválené texty v aktuálních komponentách; otevřené otázky uvádí CONTENT_REVIEW.md.
+
 ## 🎯 1. Psaní efektivních titulků (H1, title tagy)
 
 ### ✅ Dobré příklady pro energetický sektor:

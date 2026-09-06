@@ -33,34 +33,34 @@ const Blog = () => {
           {/* Featured article */}
           <div className="rounded-lg border border-border bg-[#f8faff] p-6 md:p-10 mb-10 space-y-4">
             <h2 className="text-xl md:text-2xl font-bold text-foreground">
-              Jak pracuji a co ode mě můžete (a nemůžete) čekat
+              Od vyúčtování ke konkrétnímu návrhu
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Většina lidí má energetické poradce spojené s nekonečnými telefonáty a neustálým tlakem na podpis nové smlouvy. V projektu Nepřeplácejme na to jdu jinak. Chci, abyste věděli, na čem jste, hned od prvního kontaktu.
+              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
             </p>
             <div className="space-y-3 text-muted-foreground leading-relaxed">
               <div>
-                <strong className="text-foreground">Dlouhodobý klid místo honění za každou korunou</strong>
+                <strong className="text-foreground">Cena i podmínky smlouvy</strong>
                 <p className="mt-1">
-                  Mým cílem není pravidelně měnit vašeho dodavatele energií. Naopak. Chci pro vás vyjednat takové podmínky, abyste mohli dlouhodobě a pohodlně odebírat za férové ceny. Pomáhám vám vyhnout se pastem v podobě nevýhodných automatických prolongací nebo nevýhodných nabídek dodavatele a hlídám termíny i trh za vás.
+                  Při porovnání sleduji cenu za MWh, stálé platby, délku závazku i podmínky prodloužení. Podle dohody pomohu také s hlídáním termínů a přípravou na další smluvní období.
                 </p>
               </div>
               <div>
-                <strong className="text-foreground">Klid na rozhodnutí: Komunikujeme e-mailem</strong>
+                <strong className="text-foreground">Podklady přehledně e-mailem</strong>
                 <p className="mt-1">
-                  Vím, jak dokážou být prodejní hovory nevhodné. Proto zakládám spolupráci na e-mailové komunikaci. Máte čas si vše v klidu rozmyslet a naše dohody máte vždy písemně v poště, abyste se k nim mohli kdykoliv vrátit.
+                  Srovnání a návrh dalšího postupu vám pošlu e-mailem. Nabídky si můžete projít, vrátit se k jejich podmínkám a zeptat se na to, co potřebujete vysvětlit.
                 </p>
               </div>
               <div>
-                <strong className="text-foreground">Moje hodnocení je vždy objektivní</strong>
+                <strong className="text-foreground">Návrh podle vašeho odběru</strong>
                 <p className="mt-1">
-                  Když mi pošlete fakturu k posouzení, mým úkolem je dát vám reálný obraz vaší situace. Pokud zjistím, že vaše stávající podmínky jsou nastavené správně a férově, narovinu vám doporučím u současného dodavatele zůstat. Pro mě je cílem hlídat vaše odběrná místa tak, jak hlídám svoje vlastní.
+                  Vaše současné podmínky porovnám s nabídkami spolupracujících dodavatelů. Upozorním na rozdíly v ceně a závazku a vysvětlím navržený postup. S vyřízením zvoleného řešení vám pomohu.
                 </p>
               </div>
             </div>
             <Button asChild className="mt-4">
               <Link to="/kontrola-vyuctovani#formular" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "blog_intro" })}>
-                Chci prověřit fakturu v klidu přes e-mail <ArrowRight className="ml-2 h-4 w-4" />
+                Zkontrolovat vyúčtování zdarma <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
             </Button>
           </div>

@@ -12,17 +12,17 @@ export const ContactForm = () => {
       </CardHeader>
       <CardContent className="text-center space-y-6 px-6 md:px-10 pb-8">
         <p className="text-lg text-muted-foreground">
-          Vyplňte registrační formulář a já se postaráme o zbytek.
+          Pošlete nezávaznou poptávku a ozvu se vám s návrhem dalšího postupu.
         </p>
         
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 text-sm text-left py-4">
           <div className="flex items-start gap-2">
             <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-            <span className="text-foreground">Registrace zabere jen pár minut</span>
+            <span className="text-foreground">Stačí základní údaje o odběru</span>
           </div>
           <div className="flex items-start gap-2">
             <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
-            <span className="text-foreground">Platíte až po úspěšném vyjenání férové nabídky</span>
+            <span className="text-foreground">Kontrola vyúčtování zdarma</span>
           </div>
           <div className="flex items-start gap-2">
             <CheckCircle className="h-5 w-5 text-primary mt-0.5 flex-shrink-0" />
@@ -47,7 +47,7 @@ export const ContactForm = () => {
         </Button>
         
         <p className="text-xs text-muted-foreground pt-2">
-          Po vyplnění vás budeme kontaktovat pro případné doplnění údajů.
+          Po odeslání se vám ozvu a domluvíme se na potřebných podkladech.
         </p>
       </CardContent>
     </Card>

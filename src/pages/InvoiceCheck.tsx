@@ -11,7 +11,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const InvoiceCheck = () => {
   usePageMeta(
     "Kontrola vyúčtování elektřiny a plynu zdarma | Nepřeplácejme.cz",
-    "Pošlete vyúčtování elektřiny nebo plynu. Zdarma prověřím cenu, smlouvu i distribuční sazbu a řeknu vám, zda má změna smysl.",
+    "Z vyúčtování zjistím vaše ceny a spotřebu. Navrhnu další postup, abyste za elektřinu a plyn zbytečně nepřepláceli. Kontrola je zdarma.",
     "/kontrola-vyuctovani",
   );
 
@@ -28,7 +28,7 @@ const InvoiceCheck = () => {
               Pošlete vyúčtování. Zjistím, jestli za energie zbytečně nepřeplácíte.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Osobně prověřím cenu, stálé platby, smluvní podmínky i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. A pokud už máte vše nastavené dobře, řeknu vám to na rovinu.
+              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
               <Button size="lg" asChild className="text-base px-8">
@@ -42,8 +42,9 @@ const InvoiceCheck = () => {
                 </a>
               </Button>
             </div>
+            <p className="mt-5 text-base text-primary font-medium">Kontrola vyúčtování je zdarma a nezávazná.</p>
             <ul className="flex flex-col sm:flex-row flex-wrap justify-center gap-x-8 gap-y-2 mt-7 text-sm text-muted-foreground">
-              {["0 Kč pro klienta", "Bez telefonního nátlaku", "Nic nepodepisujete přes web"].map((item) => (
+              {["Osobní posouzení", "Přehledné srovnání", "Prostor na rozhodnutí"].map((item) => (
                 <li key={item} className="flex items-center justify-center gap-2"><Check className="h-4 w-4 text-primary" />{item}</li>
               ))}
             </ul>
@@ -60,7 +61,7 @@ const InvoiceCheck = () => {
             </div>
             <div className="grid md:grid-cols-3 gap-5">
               {[
-                ["Cena a stálé platby", "Porovnám obchodní cenu i pravidelné poplatky se spolupracujícími dodavateli."],
+                ["Cena a stálé platby", "Porovnám obchodní cenu i pravidelné poplatky s nabídkami spolupracujících dodavatelů."],
                 ["Smlouva a fixace", "Prověřím délku závazku, automatické prodloužení a vhodný okamžik pro řešení nabídky."],
                 ["Distribuční sazba", "Zkontroluji, zda sazba a nastavení odběrného místa odpovídají skutečnému využití."],
               ].map(([title, text]) => (
@@ -86,7 +87,7 @@ const InvoiceCheck = () => {
               </p>
               <div className="flex gap-3 text-sm text-muted-foreground">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
-                <span>Komunikuji především e-mailem, takže máte všechno písemně a čas se v klidu rozhodnout.</span>
+                <span>Podklady a návrh dalšího postupu vám pošlu e-mailem, abyste se k nim mohli při rozhodování vrátit.</span>
               </div>
             </div>
             <div className="bg-background border border-border rounded-lg p-2 md:p-4 shadow-sm overflow-hidden">

@@ -1,7 +1,7 @@
 {
   "name": "Nepřeplácejme – kontrola vyúčtování za energie",
   "short_name": "Nepřeplácejme",
-  "description": "Pomáhám lidem a firmám zorientovat se v jejich vyúčtování za elektřinu a plyn. Nezávazně posoudím, zda jsou vaše ceny dlouhodobě férové.",
+  "description": "Z vyúčtování zjistím vaše ceny a spotřebu a navrhnu další postup, abyste zbytečně nepřepláceli. Kontrola je zdarma a nezávazná.",
   "start_url": "/",
   "display": "standalone",
   "background_color": "#ffffff",

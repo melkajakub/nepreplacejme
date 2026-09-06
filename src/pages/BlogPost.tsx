@@ -30,9 +30,9 @@ const BlogPost = () => {
       if (ogDescription) ogDescription.content = post.excerpt;
     }
     return () => {
-      document.title = "Kontrola vyúčtování a úspora energií zdarma | Nepřeplácejme.cz";
+      document.title = "Kontrola vyúčtování energií zdarma | Nepřeplácejme.cz";
       const metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-      if (metaDesc) metaDesc.content = "Zdarma prověřím cenu, smlouvu i distribuční sazbu elektřiny a plynu. Řešení pro domácnosti, firmy, obce i sdílení elektřiny.";
+      if (metaDesc) metaDesc.content = "Z vyúčtování zjistím vaše ceny a spotřebu. Navrhnu další postup, abyste za elektřinu a plyn zbytečně nepřepláceli. Kontrola je zdarma.";
       const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
       if (canonical) canonical.href = "https://nepreplacejme.cz/";
       const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
@@ -48,6 +48,7 @@ const BlogPost = () => {
     return content.split("\n").map((line, i) => {
       const trimmed = line.trim();
       if (!trimmed) return <br key={i} />;
+      if (trimmed === "---") return <hr key={i} className="my-8 border-border" />;
 
       if (trimmed.startsWith("### ")) {
         return (
@@ -164,15 +165,20 @@ const BlogPost = () => {
             {post.title}
           </h1>
 
-          <time className="text-sm text-muted-foreground/60 block mb-10">
+          <time dateTime={post.date} className="text-sm text-muted-foreground/60 block mb-2">
             {new Date(post.date).toLocaleDateString("cs-CZ", {
               day: "numeric",
               month: "long",
               year: "numeric",
             })}
           </time>
+          {post.updatedAt && (
+            <p className="text-sm text-muted-foreground/60 mb-4">
+              Aktualizováno: <time dateTime={post.updatedAt}>{new Date(post.updatedAt).toLocaleDateString("cs-CZ")}</time>
+            </p>
+          )}
 
-          <div className="prose-custom">{renderContent(post.content)}</div>
+          <div className="prose-custom mt-8">{renderContent(post.content)}</div>
 
           {/* CTA */}
           <div className="mt-20 mb-8 p-6 md:p-8 rounded-lg bg-secondary text-center space-y-4">
@@ -183,8 +189,8 @@ const BlogPost = () => {
             </h3>
             <p className="text-muted-foreground">
               {isVietnamese
-                ? "Nahrajte mi poslední fakturu za elektřinu v PDF. Spočítám vám úsporu a navrhnu stabilní a výhodné řešení. / Hãy gửi cho tôi hóa đơn tiền điện mới nhất của bạn qua định dạng PDF. Tôi sẽ tính toán mức tiết kiệm và đề xuất giải pháp ổn định và có lợi cho bạn."
-                : "Pokud chcete mít klid, že neplatíte víc, než musíte, rád se na vaše vyúčtování podívám. Stačí mi ho nahrát v PDF a já vám napíšu svůj pohled."}
+                ? "Pošlete poslední vyúčtování jako PDF nebo fotografii. Porovnám ceny a spotřebu a navrhnu další postup. / Hãy gửi hóa đơn gần nhất dưới dạng PDF hoặc ảnh. Tôi sẽ so sánh giá điện và mức tiêu thụ rồi đề xuất các bước tiếp theo."
+                : "Pošlete poslední vyúčtování jako PDF nebo fotografii. Zjistím z něj ceny a spotřebu a navrhnu další postup, abyste zbytečně nepřepláceli."}
             </p>
             <Button size="lg" className="text-xs sm:text-sm md:text-base px-5 py-3 md:px-8 w-full sm:w-auto whitespace-normal text-center" asChild>
               {isVietnamese ? (
@@ -204,6 +210,11 @@ const BlogPost = () => {
                 </Link>
               )}
             </Button>
+            <p className="text-sm text-muted-foreground">
+              {isVietnamese
+                ? "Kontrola vyúčtování je zdarma a nezávazná. / Việc kiểm tra hóa đơn là miễn phí và không ràng buộc."
+                : "Kontrola vyúčtování je zdarma a nezávazná."}
+            </p>
             {isVietnamese && (
               <p className="text-sm text-muted-foreground/80 leading-relaxed">
                 Nebo mi stačí poslat fotku či PDF faktury na e-mail:{" "}
@@ -214,7 +225,7 @@ const BlogPost = () => {
                   info@nepreplacejme.cz
                 </a>
                 <br />
-                Hoặc bạn chỉ cần gửi ảnh hoặc file PDF hóa đơn do email:{" "}
+                Hoặc gửi ảnh hoặc tệp PDF hóa đơn qua email:{" "}
                 <a
                   href="mailto:info@nepreplacejme.cz"
                   className="underline hover:text-foreground transition-colors"

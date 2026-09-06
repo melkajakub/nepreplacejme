@@ -105,7 +105,7 @@ const Sharing = () => {
     const previousOgUrl = ogUrl?.content;
     const pageTitle = "Sdílení elektřiny pro výrobce i odběratele | Nepřeplácejme.cz";
     const pageDescription =
-      "Propojení výrobců elektřiny s domácnostmi, firmami a obcemi. Prověření výroby, spotřeby a zajištění celého procesu sdílení.";
+      "Propojení výrobců elektřiny s domácnostmi, firmami a obcemi. Posouzení výroby, spotřeby a možností zapojení do sdílení.";
 
     document.title = pageTitle;
     if (description) {
@@ -353,8 +353,8 @@ const Sharing = () => {
                 <Handshake className="h-8 w-8 mb-5" />
                 <h2 className="text-2xl md:text-3xl font-bold mb-4">Od prvního posouzení až po zapojení</h2>
                 <p className="text-primary-foreground/80 leading-relaxed">
-                  Pokud se ukáže, že vám sdílení nedává smysl, řeknu to na rovinu
-                  a můžeme prověřit jiné možnosti úspory.
+                  Podle údajů o výrobě a spotřebě připravíme se spolupracujícím
+                  partnerem návrh zapojení, přehled podmínek a další postup.
                 </p>
               </div>
               <ol className="grid sm:grid-cols-2 gap-4">
@@ -362,7 +362,7 @@ const Sharing = () => {
                   "Vysvětlíme si váš záměr",
                   "Získám údaje o výrobě nebo spotřebě",
                   "Posoudíme potenciál sdílení",
-                  "Najdeme vhodné zapojení a protistrany",
+                  "Prověříme dostupné výrobce nebo odběratele",
                   "Odborný partner připraví smlouvy a administrativu",
                   "Sdílení se vyhodnocuje podle skutečných dat",
                 ].map((step, index) => (
@@ -422,7 +422,7 @@ const Sharing = () => {
                 </div>
                 <div className="flex items-start gap-3 text-sm text-muted-foreground">
                   <ShieldCheck className="h-5 w-5 text-primary shrink-0" />
-                  Odesláním formuláře nevzniká žádná smlouva ani závazek.
+                  Formulář slouží k nezávazné poptávce možností sdílení.
                 </div>
                 <Button variant="outline" asChild>
                   <a href="mailto:info@nepreplacejme.cz?subject=Sdílení elektřiny – nezávazná poptávka" onClick={() => captureEvent("sharing_email_clicked")}>

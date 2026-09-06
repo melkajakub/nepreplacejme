@@ -4,14 +4,14 @@ const results = [
   {
     name: "Blažena",
     icon: ArrowDown,
-    headline: "Plyn: 1 700 → 940 Kč/MWh",
-    detail: "Při spotřebě 17 MWh je rozdíl přibližně 12 920 Kč za rok bez DPH.",
+    headline: "Plyn: 1 700 → 940 Kč/MWh bez DPH",
+    detail: "Při spotřebě 17 MWh odpovídá rozdíl v ceně plynu přibližně 12 920 Kč za rok bez DPH.",
   },
   {
     name: "Milan",
     icon: PiggyBank,
-    headline: "Elektřina: 3 950 → 2 400 Kč/MWh",
-    detail: "I při spotřebě kolem 4 MWh vychází rozdíl přibližně 6 200 Kč za rok bez DPH.",
+    headline: "Elektřina: 3 950 → 2 400 Kč/MWh bez DPH",
+    detail: "Při spotřebě kolem 4 MWh odpovídá rozdíl v ceně elektřiny přibližně 6 200 Kč za rok bez DPH.",
   },
   {
     name: "Lukáš",
@@ -54,7 +54,9 @@ export const ClientResults = ({ compact = false }: ClientResultsProps) => (
         ))}
       </div>
       <p className="text-xs text-muted-foreground text-center mt-5">
-        Uváděné výsledky nejsou příslibem stejné úspory v jiném odběrném místě.
+        U Blaženy a Milana jde o rozdíl v obchodní ceně za MWh při uvedené roční spotřebě,
+        bez započtení případných změn stálých plateb a regulovaných položek.
+        Výsledky jednotlivých klientů nejsou příslibem stejné úspory v jiném odběrném místě.
       </p>
     </div>
   </section>

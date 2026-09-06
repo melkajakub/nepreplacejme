@@ -43,11 +43,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Osobně prověřím cenu, smlouvu i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. A pokud už máte vše nastavené dobře, řeknu vám to na rovinu.
-            </p>
-
-            <p className="text-base text-primary font-medium">
-              Kontrola i sjednání jsou pro vás zdarma. Odměnu dostávám od dodavatele.
+              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
             </p>
 
             {/* Audience badges */}
@@ -75,11 +71,11 @@ const Index = () => {
               </li>
               <li className="flex items-center gap-2">
                 <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Žádná call centra ani otravné telefonáty</span>
+                <span>Osobní komunikace, prostor na rozhodnutí</span>
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Podmínky u ověřených českých dodavatelů</span>
+                <span>Srovnání nabídek spolupracujících dodavatelů</span>
               </li>
             </ul>
 
@@ -119,23 +115,27 @@ const Index = () => {
               </Button>
             </div>
 
+            <p className="text-base text-primary font-medium">
+              Kontrola vyúčtování je zdarma a nezávazná.
+            </p>
+
             {/* Three paths cards */}
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 md:pt-14 text-left">
               {[
                 {
                   icon: FileSearch,
                   title: "Chci nezávazně posoudit své podmínky",
-                  desc: "Máte pocit, že u svého dodavatele přeplácíte? Vaše vyúčtování osobně projdu a na rovinu vám řeknu, zda máte férové podmínky.",
+                  desc: "Pošlete poslední vyúčtování. Porovnám vaše ceny a spotřebu s dostupnými nabídkami a navrhnu další postup.",
                 },
                 {
                   icon: KeyRound,
                   title: "Koupil jsem nemovitost / Řeším přepis",
-                  desc: "Provedu vás celým procesem přepisu energií na nové jméno a připravím pro vás výhodné podmínky u nového dodavatele.",
+                  desc: "Pomohu s přepisem energií na nové jméno, potřebnými podklady a výběrem nabídky pro vaše odběrné místo.",
                 },
                 {
                   icon: HardHat,
                   title: "Stavím dům / Nové odběrné místo",
-                  desc: "Potřebujete novou přípojku, sloupek nebo elektroměr? Pomohu vám s celým postupem od nuly až po smlouvu s distributorem.",
+                  desc: "Řešíte připojení nového domu? Pomohu vám zorientovat se v postupu a připravit podklady pro distributora i dodavatele.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <a
@@ -167,10 +167,10 @@ const Index = () => {
                 <div className="absolute top-0 left-0 w-1 h-full bg-primary/40" />
                 <div className="relative space-y-2">
                   <h3 className="text-lg md:text-xl font-semibold text-foreground leading-snug">
-                    Máte byt s malou spotřebou? I tak můžete přeplácet tisíce.
+                    I při malé spotřebě má smysl vyúčtování zkontrolovat.
                   </h3>
                   <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    Spousta lidí v bytech si myslí, že při nízké spotřebě nemá smysl faktury řešit. Opak je pravdou – často narážím na špatně nastavenou distribuční sazbu v kombinaci s vysokou cenou. I tady dokážu ušetřit až 2 000 Kč ročně, přestože proudem nijak neplýtváte.
+                    U menší spotřeby hrají důležitou roli také stálé měsíční platby a distribuční sazba. Podívám se na tyto položky společně s cenou elektřiny a posoudím možnosti úspory podle vašeho odběru.
                   </p>
                 </div>
               </div>
@@ -266,21 +266,21 @@ const Index = () => {
                   Klid a jistota pro váš domov
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
-                  Srovnání ceníků a výběr férového řešení od prověřených českých dodavatelů.
+                  Porovnání cen a smluvních podmínek spolupracujících dodavatelů podle vaší spotřeby.
                 </p>
                 <ul className="space-y-3 mb-6">
                   {[
                     {
                       title: "Srovnání dostupných ceníků",
-                      desc: "Průzkum trhu a výběr spolehlivého partnera s nejvýhodnější cenou.",
+                      desc: "Porovnání ceny za energii, stálých plateb a délky závazku u dostupných nabídek.",
                     },
                     {
-                      title: "Srozumitelně a polopatě",
-                      desc: "Vše vysvětleno lidskou řečí bez složité hantýrky a kliček.",
+                      title: "Srozumitelné vysvětlení",
+                      desc: "Vysvětlím rozdíly mezi nabídkami a upozorním na důležité podmínky.",
                     },
                     {
                       title: "Bez starostí",
-                      desc: "Přechod k novému dodavateli i papírování vyřídím kompletně za vás.",
+                      desc: "Pomohu s podklady a administrativou při změně dodavatele.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
@@ -318,7 +318,7 @@ const Index = () => {
                   </span>
                 </div>
                 <h3 className="text-2xl md:text-3xl font-bold text-foreground leading-snug mb-3">
-                  Optimalizace ceníků i individuální velkoobchodní nákup
+                  Srovnání ceníků i individuální nabídky
                 </h3>
                 <p className="text-muted-foreground leading-relaxed mb-6">
                   Řešení na míru podle velikosti odběru – pro menší i velké provozovny.
@@ -327,11 +327,11 @@ const Index = () => {
                   {[
                     {
                       title: "Řešení na míru",
-                      desc: "Pro menší firmy vybereme optimální ceník na trhu, pro velké odběry zajišťujeme individuální nabídku navázanou na velkoobchodní trh.",
+                      desc: "Pro menší firmy porovnám dostupné ceníky, pro větší odběry poptám individuální podmínky u dodavatelů.",
                     },
                     {
-                      title: "Kompletní energetický servis",
-                      desc: "Hlídání konce fixací, kontrola nastavení parametrů a správcovská administrativa.",
+                      title: "Průběžná péče o odběrná místa",
+                      desc: "Podle dohody pomohu s hlídáním fixací, kontrolou nastavení a související administrativou.",
                     },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
@@ -350,7 +350,7 @@ const Index = () => {
                 <div className="mt-auto">
                   <Button asChild className="w-full sm:w-auto">
                     <Link to="/energie-pro-firmy" onClick={() => captureEvent("business_cta_clicked", { location: "homepage_audience" })}>
-                      Poptat B2B řešení
+                      Poptat řešení pro firmu nebo obec
                       <ArrowRight className="ml-2 h-4 w-4" />
                     </Link>
                   </Button>
@@ -373,7 +373,7 @@ const Index = () => {
                 Jak probíhá spolupráce?
               </h2>
               <p className="text-muted-foreground">
-                Čistý a transparentní proces od prvního kontaktu.
+                Od vyúčtování k porovnání konkrétních nabídek.
               </p>
             </div>
             <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
@@ -390,13 +390,13 @@ const Index = () => {
                   step: "2",
                   icon: BarChart3,
                   title: "Připravím přehled",
-                  desc: "Porovnám trh nebo poptám individuální nabídku u předních dodavatelů.",
+                  desc: "Porovnám dostupné ceníky nebo poptám individuální nabídky podle vaší spotřeby.",
                 },
                 {
                   step: "3",
                   icon: CheckCircle2,
-                  title: "Vyberete si a šetříte",
-                  desc: "Pokud se vám nabídka líbí, zařídím administrativu. Pokud ne, nic se neděje.",
+                  title: "Vyberete další postup",
+                  desc: "Projdeme nabídky a jejich podmínky. S vyřízením zvoleného řešení vám pomohu.",
                 },
               ].map(({ step, icon: Icon, title, desc }) => (
                 <div
@@ -429,18 +429,18 @@ const Index = () => {
               {[
                 {
                   icon: ShieldCheck,
-                  title: "Spolupráce s lídry trhu",
-                  desc: "Nabízím výhradně dodávky od předních, stabilních a licencovaných českých dodavatelů.",
+                  title: "Nabídky licencovaných dodavatelů",
+                  desc: "Srovnávám nabídky spolupracujících dodavatelů elektřiny a plynu.",
                 },
                 {
                   icon: Handshake,
                   title: "Řešení podle vašich čísel",
-                  desc: "Doporučuji nastavení, které dává největší smysl pro vaše konkrétní odběrné místo.",
+                  desc: "Při porovnání zohledním vaši spotřebu, využití odběrného místa i smluvní podmínky.",
                 },
                 {
                   icon: Ban,
-                  title: "Rozhodnutí necháváme na vás",
-                  desc: "Žádné vmanipulování do nevýhodných smluv – finální slovo máte vždy vy.",
+                  title: "Rozhodnutí je na vás",
+                  desc: "Dostanete podklady k posouzení a sami si vyberete další postup.",
                 },
               ].map(({ icon: Icon, title, desc }) => (
                 <div
@@ -470,16 +470,15 @@ const Index = () => {
             </h2>
             <div className="rounded-lg border border-border bg-background p-6 md:p-8 space-y-4">
               <h3 className="text-xl md:text-2xl font-bold text-foreground">
-                Jak pracuji a co ode mě můžete čekat
+                Jak porovnávat nabídky energií
               </h3>
               <p className="text-muted-foreground leading-relaxed">
-                Většina lidí má energetické poradce spojené s nekonečnými telefonáty
-                a tlakem na podpis nové smlouvy. Já to dělám jinak. Chci,
-                abyste od prvního kontaktu věděli, na čem jste – a rozhodnutí
-                nechávám vždy na vás.
+                Na blogu vysvětluji, co sledovat ve vyúčtování, jak se rozhodovat
+                o fixaci a proč při srovnání záleží také na stálých platbách
+                a podmínkách smlouvy.
               </p>
               <Button variant="outline" asChild className="mt-2">
-                <Link to="/blog">Přečíst celý příběh</Link>
+                <Link to="/blog">Přečíst rady a články</Link>
               </Button>
             </div>
           </div>
@@ -496,8 +495,8 @@ const Index = () => {
                     Bezplatná kontrola / Nezávazná poptávka
                   </h2>
                   <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                    Stačí vyplnit základní údaje a přiložit vyúčtování. Za kontrolu
-                    ani sjednání mi nic neplatíte. Pokud nemáte podklady po ruce,
+                    Stačí vyplnit základní údaje a přiložit vyúčtování. Kontrola
+                    vyúčtování je zdarma a nezávazná. Pokud nemáte podklady po ruce,
                     napište mi přímo na{" "}
                     <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
                       info@nepreplacejme.cz
