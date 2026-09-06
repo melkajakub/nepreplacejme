@@ -30,6 +30,7 @@ import {
 import SiteHeader from "@/components/SiteHeader";
 import SiteFooter from "@/components/SiteFooter";
 import TallyEmbed from "@/components/TallyEmbed";
+import TransparentPricing from "@/components/TransparentPricing";
 import { captureEvent } from "@/lib/posthog";
 
 const producerBenefits = [
@@ -391,6 +392,8 @@ const Sharing = () => {
             </Accordion>
           </div>
         </section>
+
+        <TransparentPricing sharing />
 
         <section id="poptavka" className="px-4 py-16 md:py-20 bg-[hsl(220_20%_98%)] scroll-mt-24">
           <div className="container mx-auto max-w-6xl">

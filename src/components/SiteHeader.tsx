@@ -22,27 +22,27 @@ export const SiteHeader = () => {
           <div className="hidden sm:flex flex-col leading-tight min-w-0">
             <span className="font-semibold text-foreground text-lg">Nepřeplácejme.cz</span>
             <span className="text-xs text-muted-foreground truncate">
-              Váš nezávislý partner pro nákup a správu energií
+              Osobní pomoc s nákupem a správou energií
             </span>
           </div>
         </Link>
 
         <nav className="flex items-center gap-3 md:gap-5" aria-label="Hlavní navigace">
-          <a
-            href={homeAnchor("#domacnosti", isHome)}
+          <Link
+            to="/kontrola-vyuctovani"
             className="hidden lg:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
           >
             Pro domácnosti
-          </a>
-          <a
-            href={homeAnchor("#firmy", isHome)}
+          </Link>
+          <Link
+            to="/energie-pro-firmy"
             className="hidden lg:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
           >
             Pro firmy a obce
-          </a>
+          </Link>
           <Link
             to="/sdileni-elektriny"
-            className="text-sm font-medium text-primary hover:text-primary-glow transition-colors"
+            className="hidden sm:inline text-sm font-medium text-primary hover:text-primary-glow transition-colors"
           >
             Sdílení elektřiny
           </Link>
@@ -58,8 +58,8 @@ export const SiteHeader = () => {
           >
             Blog
           </Link>
-          <Button asChild size="sm" className="hidden md:inline-flex">
-            <a href={homeAnchor("#formular", isHome)}>Nezávazná konzultace</a>
+          <Button asChild size="sm" className="inline-flex">
+            <Link to="/kontrola-vyuctovani#formular">Kontrola zdarma</Link>
           </Button>
         </nav>
       </div>
