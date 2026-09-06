@@ -51,6 +51,11 @@ jobs:
     runs-on: ubuntu-latest
     needs: build
     steps:
+      # The repository still has GitHub's legacy branch-based Pages build enabled.
+      # Let that run finish first so this workflow's compiled artifact is the final deployment.
+      - name: Wait for legacy Pages build
+        run: sleep 30
+
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
