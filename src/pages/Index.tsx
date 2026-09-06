@@ -43,7 +43,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Osobně prověřím cenu, smlouvu i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. Pokud jsou vaše podmínky dobré, doporučím vám nic neměnit.
+              Osobně prověřím cenu, smlouvu i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. A pokud už máte vše nastavené dobře, řeknu vám to na rovinu.
             </p>
 
             <p className="text-base text-primary font-medium">

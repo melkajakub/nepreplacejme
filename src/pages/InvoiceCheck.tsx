@@ -28,7 +28,7 @@ const InvoiceCheck = () => {
               Pošlete vyúčtování. Zjistím, jestli za energie zbytečně nepřeplácíte.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Osobně prověřím cenu, stálé platby, smluvní podmínky i distribuční sazbu. Pokud máte dobrou smlouvu, řeknu vám, že není důvod ji měnit.
+              Osobně prověřím cenu, stálé platby, smluvní podmínky i distribuční sazbu. Pokud najdu lepší řešení, pomohu s jeho vyřízením. A pokud už máte vše nastavené dobře, řeknu vám to na rovinu.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
               <Button size="lg" asChild className="text-base px-8">
