@@ -39,7 +39,7 @@ const Index = () => {
         <section className="py-16 md:py-24 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Pošlete vyúčtování. Zjistím, jestli za energie zbytečně nepřeplácíte.
+              Pojďme zjistit, jestli můžete za energie platit méně.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">

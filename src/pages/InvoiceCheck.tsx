@@ -25,7 +25,7 @@ const InvoiceCheck = () => {
               <FileSearch className="h-4 w-4" /> Kontrola elektřiny a plynu zdarma
             </span>
             <h1 className="text-3xl md:text-5xl font-bold text-foreground leading-tight tracking-tight max-w-4xl mx-auto">
-              Pošlete vyúčtování. Zjistím, jestli za energie zbytečně nepřeplácíte.
+              Pojďme zjistit, jestli můžete za energie platit méně.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
               Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
