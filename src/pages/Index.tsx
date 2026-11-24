@@ -39,11 +39,11 @@ const Index = () => {
         <section className="py-16 md:py-24 px-4">
           <div className="container mx-auto max-w-5xl text-center space-y-6">
             <h1 className="text-3xl md:text-4xl lg:text-5xl font-bold text-foreground leading-tight tracking-tight">
-              Pojďme zjistit, jestli můžete za energie platit méně.
+              Zjistěte, jestli vaše cena energií dává smysl.
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
+              Pošlete mi poslední vyúčtování, nebo jednoduše napište, jakou máte cenu, spotřebu a kdy vám končí smlouva. Podívám se na dostupné možnosti a řeknu vám, jestli má smysl něco měnit – teď, nebo až později.
             </p>
 
             {/* Audience badges */}
@@ -80,43 +80,22 @@ const Index = () => {
             </ul>
 
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3 pt-2">
-              <Button
-                variant="default"
-                size="lg"
-                className="text-base px-8 w-full sm:w-auto"
-                asChild
-              >
-                <Link to="/kontrola-vyuctovani" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "homepage_hero" })}>
-                  <Home className="mr-2 h-4 w-4" />
-                  Zkontrolovat vyúčtování zdarma
-                </Link>
+              <Button variant="default" size="lg" className="text-base px-8 w-full sm:w-auto" asChild>
+                <a href="#formular" onClick={() => captureEvent("invoice_check_cta_clicked", { location: "homepage_hero" })}>
+                  <FileText className="mr-2 h-4 w-4" />
+                  Poslat vyúčtování nebo údaje
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </a>
               </Button>
-              <Button
-                variant="outline"
-                size="lg"
-                className="text-base px-8 w-full sm:w-auto"
-                asChild
-              >
-                <Link to="/energie-pro-firmy" onClick={() => captureEvent("business_cta_clicked", { location: "homepage_hero" })}>
-                  <Building2 className="mr-2 h-4 w-4" />
-                  Řešení pro firmu / obec
-                </Link>
-              </Button>
-              <Button
-                variant="ghost"
-                size="lg"
-                className="text-base px-6 w-full sm:w-auto text-primary"
-                asChild
-              >
-                <Link to="/sdileni-elektriny" onClick={() => captureEvent("sharing_cta_clicked", { location: "homepage_hero" })}>
-                  <Network className="mr-2 h-4 w-4" />
-                  Zjistit možnosti sdílení
-                </Link>
+              <Button variant="outline" size="lg" className="text-base px-8 w-full sm:w-auto" asChild>
+                <a href="#jak-to-funguje">
+                  Jak to funguje
+                </a>
               </Button>
             </div>
 
             <p className="text-base text-primary font-medium">
-              Kontrola vyúčtování je zdarma a nezávazná.
+              Posouzení vyúčtování i zaslaných údajů je zdarma a nezávazné.
             </p>
 
             {/* Three paths cards */}
@@ -174,6 +153,66 @@ const Index = () => {
                   </p>
                 </div>
               </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Primary action: easy hand-off after a conversation */}
+        <section id="formular" className="py-12 md:py-16 px-4 scroll-mt-24 bg-[hsl(220_20%_98%)]">
+          <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
+            <div className="space-y-6">
+              <div className="space-y-3">
+                <span className="text-xs font-semibold uppercase tracking-wider text-primary">Nezávazné posouzení</span>
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground">Vyúčtování, nebo pár údajů? Obojí stačí.</h2>
+                <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
+                  Zvolte si, co je pro vás pohodlnější. Nemusíte nic složitě dohledávat ani vyplňovat všechno najednou.
+                </p>
+              </div>
+              <div className="grid gap-4">
+                <div className="rounded-xl border border-border bg-background p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <FileText className="h-5 w-5 text-primary shrink-0" />
+                    <h3 className="font-semibold text-lg text-foreground">Mám vyúčtování</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Nahrajte PDF nebo fotografii posledního vyúčtování elektřiny či plynu. Z něj zjistím cenu i spotřebu.
+                  </p>
+                </div>
+                <div className="rounded-xl border border-border bg-background p-5">
+                  <div className="flex items-center gap-3 mb-2">
+                    <BarChart3 className="h-5 w-5 text-primary shrink-0" />
+                    <h3 className="font-semibold text-lg text-foreground">Své podmínky znám</h3>
+                  </div>
+                  <p className="text-sm text-muted-foreground leading-relaxed">
+                    Napište do zprávy cenu za MWh, přibližnou roční spotřebu, distribuční sazbu a konec závazku. U ceny uveďte, zda je s DPH, nebo bez DPH. Co nevíte, klidně vynechte.
+                  </p>
+                </div>
+              </div>
+              <div className="rounded-xl border border-primary/20 bg-background p-5 space-y-2">
+                <h3 className="font-semibold text-foreground">Smlouva končí až za několik měsíců?</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed">
+                  Někdy lze sjednat novou nabídku s předstihem a zahájením dodávek až po skončení stávající smlouvy. Záleží na dodavateli a konkrétních podmínkách. Podívám se, jestli to pro vás dává smysl – ceny se mohou vyvíjet oběma směry.
+                </p>
+              </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                Posouzení je zdarma a k žádné změně vás nezavazuje. Pokud pro vás teď lepší řešení nenajdu, řeknu vám to.
+              </p>
+              <div className="flex items-center gap-3">
+                <div className="w-14 h-14 rounded-full bg-primary/10 border border-primary/20 flex items-center justify-center overflow-hidden shrink-0">
+                  <img
+                    src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
+                    alt="Logo Nepřeplácejme.cz"
+                    className="w-full h-full object-cover"
+                  />
+                </div>
+                <div>
+                  <p className="font-semibold text-foreground">Jakub Melka</p>
+                  <p className="text-sm text-muted-foreground">Osobní pomoc s nákupem a správou energií</p>
+                </div>
+              </div>
+            </div>
+            <div className="bg-background border border-border rounded-lg p-2 md:p-4 shadow-sm overflow-hidden">
+              <TallyEmbed />
             </div>
           </div>
         </section>
@@ -384,7 +423,7 @@ const Index = () => {
                   step: "1",
                   icon: FileText,
                   title: "Pošlete podklady",
-                  desc: "Stačí poslat poslední vyúčtování nebo roční spotřebu.",
+                  desc: "Můžete nahrát vyúčtování, nebo mi napsat cenu, spotřebu, sazbu a konec závazku.",
                 },
                 {
                   step: "2",
@@ -484,50 +523,6 @@ const Index = () => {
           </div>
         </section>
 
-        {/* Form section */}
-        <section id="formular" className="py-16 md:py-20 px-4 scroll-mt-24">
-          <div className="container mx-auto max-w-6xl">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-16 items-center">
-              {/* Left column: copy + avatar */}
-              <div className="space-y-6">
-                <div className="space-y-4">
-                  <h2 className="text-2xl md:text-3xl font-bold text-foreground">
-                    Bezplatná kontrola / Nezávazná poptávka
-                  </h2>
-                  <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                    Stačí vyplnit základní údaje a přiložit vyúčtování. Kontrola
-                    vyúčtování je zdarma a nezávazná. Pokud nemáte podklady po ruce,
-                    napište mi přímo na{" "}
-                    <a href="mailto:info@nepreplacejme.cz" className="text-primary hover:underline">
-                      info@nepreplacejme.cz
-                    </a>.
-                  </p>
-                </div>
-
-                <div className="flex items-center gap-4">
-                  <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-primary/10 border-2 border-primary/20 flex items-center justify-center overflow-hidden shrink-0">
-                    <img
-                      src="/lovable-uploads/dcd1b256-2e06-4aca-963c-251ffd8dee20.png"
-                      alt="Logo Nepřeplácejme.cz"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div>
-                    <p className="font-semibold text-foreground">Jakub Melka</p>
-                    <p className="text-sm text-muted-foreground">
-                      Osobní pomoc s nákupem a správou energií
-                    </p>
-                  </div>
-                </div>
-              </div>
-
-              {/* Right column: form */}
-              <div className="bg-background border border-border rounded-lg p-2 md:p-4 shadow-sm overflow-hidden">
-                <TallyEmbed />
-              </div>
-            </div>
-          </div>
-        </section>
       </main>
 
       <SiteFooter />
