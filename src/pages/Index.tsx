@@ -98,62 +98,6 @@ const Index = () => {
               Posouzení vyúčtování i zaslaných údajů je zdarma a nezávazné.
             </p>
 
-            {/* Three paths cards */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 md:pt-14 text-left">
-              {[
-                {
-                  icon: FileSearch,
-                  title: "Chci nezávazně posoudit své podmínky",
-                  desc: "Pošlete poslední vyúčtování. Porovnám vaše ceny a spotřebu s dostupnými nabídkami a navrhnu další postup.",
-                },
-                {
-                  icon: KeyRound,
-                  title: "Koupil jsem nemovitost / Řeším přepis",
-                  desc: "Pomohu s přepisem energií na nové jméno, potřebnými podklady a výběrem nabídky pro vaše odběrné místo.",
-                },
-                {
-                  icon: HardHat,
-                  title: "Stavím dům / Nové odběrné místo",
-                  desc: "Řešíte připojení nového domu? Pomohu vám zorientovat se v postupu a připravit podklady pro distributora i dodavatele.",
-                },
-              ].map(({ icon: Icon, title, desc }) => (
-                <a
-                  key={title}
-                  href="#formular"
-                  onClick={() => captureEvent("service_path_clicked", { service: title })}
-                  className="group flex flex-col h-full gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
-                >
-                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
-                    <Icon className="h-5 w-5 text-primary" />
-                  </div>
-                  <h3 className="text-lg font-semibold text-foreground leading-snug">
-                    {title}
-                  </h3>
-                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
-                    {desc}
-                  </p>
-                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-1">
-                    Začít nezávazně
-                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-                  </span>
-                </a>
-              ))}
-            </div>
-
-            {/* Low consumption callout */}
-            <div className="mt-10 md:mt-14 max-w-3xl mx-auto text-left">
-              <div className="relative p-6 md:p-7 rounded-xl bg-muted/50 border border-border overflow-hidden">
-                <div className="absolute top-0 left-0 w-1 h-full bg-primary/40" />
-                <div className="relative space-y-2">
-                  <h3 className="text-lg md:text-xl font-semibold text-foreground leading-snug">
-                    I při malé spotřebě má smysl vyúčtování zkontrolovat.
-                  </h3>
-                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
-                    U menší spotřeby hrají důležitou roli také stálé měsíční platby a distribuční sazba. Podívám se na tyto položky společně s cenou elektřiny a posoudím možnosti úspory podle vašeho odběru.
-                  </p>
-                </div>
-              </div>
-            </div>
           </div>
         </section>
 
@@ -218,6 +162,70 @@ const Index = () => {
         </section>
 
         <ClientResults compact />
+
+        {/* Additional services for visitors who need a different kind of help */}
+        <section className="px-4 py-12 md:py-16">
+          <div className="container mx-auto max-w-5xl">
+            <h2 className="text-2xl md:text-3xl font-bold text-center mb-8">S čím dalším vám mohu pomoci</h2>
+            {/* Three paths cards */}
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-6 pt-10 md:pt-14 text-left">
+              {[
+                {
+                  icon: FileSearch,
+                  title: "Chci nezávazně posoudit své podmínky",
+                  desc: "Pošlete poslední vyúčtování. Porovnám vaše ceny a spotřebu s dostupnými nabídkami a navrhnu další postup.",
+                },
+                {
+                  icon: KeyRound,
+                  title: "Koupil jsem nemovitost / Řeším přepis",
+                  desc: "Pomohu s přepisem energií na nové jméno, potřebnými podklady a výběrem nabídky pro vaše odběrné místo.",
+                },
+                {
+                  icon: HardHat,
+                  title: "Stavím dům / Nové odběrné místo",
+                  desc: "Řešíte připojení nového domu? Pomohu vám zorientovat se v postupu a připravit podklady pro distributora i dodavatele.",
+                },
+              ].map(({ icon: Icon, title, desc }) => (
+                <a
+                  key={title}
+                  href="#formular"
+                  onClick={() => captureEvent("service_path_clicked", { service: title })}
+                  className="group flex flex-col h-full gap-3 p-6 rounded-xl bg-background border border-border shadow-sm hover:shadow-md hover:border-primary/40 transition-all"
+                >
+                  <div className="w-11 h-11 rounded-lg bg-primary/10 flex items-center justify-center">
+                    <Icon className="h-5 w-5 text-primary" />
+                  </div>
+                  <h3 className="text-lg font-semibold text-foreground leading-snug">
+                    {title}
+                  </h3>
+                  <p className="text-sm text-muted-foreground leading-relaxed flex-1">
+                    {desc}
+                  </p>
+                  <span className="inline-flex items-center gap-1 text-sm font-medium text-primary mt-1">
+                    Začít nezávazně
+                    <ArrowRight className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </span>
+                </a>
+              ))}
+            </div>
+
+            {/* Low consumption callout */}
+            <div className="mt-10 md:mt-14 max-w-3xl mx-auto text-left">
+              <div className="relative p-6 md:p-7 rounded-xl bg-muted/50 border border-border overflow-hidden">
+                <div className="absolute top-0 left-0 w-1 h-full bg-primary/40" />
+                <div className="relative space-y-2">
+                  <h3 className="text-lg md:text-xl font-semibold text-foreground leading-snug">
+                    I při malé spotřebě má smysl vyúčtování zkontrolovat.
+                  </h3>
+                  <p className="text-sm md:text-base text-muted-foreground leading-relaxed">
+                    U menší spotřeby hrají důležitou roli také stálé měsíční platby a distribuční sazba. Podívám se na tyto položky společně s cenou elektřiny a posoudím možnosti úspory podle vašeho odběru.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </section>
 
         {/* Energy sharing */}
         <section className="py-16 md:py-20 px-4 bg-[hsl(220_20%_98%)]">
