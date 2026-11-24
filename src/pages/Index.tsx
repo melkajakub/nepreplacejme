@@ -3,7 +3,7 @@ import { Button } from "@/components/ui/button";
 import {
   ShieldCheck,
   Check,
-  PhoneOff,
+  MessageCircle,
   UserCheck,
   FileSearch,
   KeyRound,
@@ -70,8 +70,8 @@ const Index = () => {
                 <span>Osobní posouzení vašich podkladů</span>
               </li>
               <li className="flex items-center gap-2">
-                <PhoneOff className="h-4 w-4 text-primary" aria-hidden="true" />
-                <span>Osobní komunikace, prostor na rozhodnutí</span>
+                <MessageCircle className="h-4 w-4 text-primary" aria-hidden="true" />
+                <span>Srozumitelná komunikace, prostor na rozhodnutí</span>
               </li>
               <li className="flex items-center gap-2">
                 <UserCheck className="h-4 w-4 text-primary" aria-hidden="true" />
