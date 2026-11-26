@@ -101,6 +101,25 @@ const Index = () => {
           </div>
         </section>
 
+        {/* Long-term care: a clear benefit beyond the initial comparison */}
+        <section className="px-4 pb-10 md:pb-14">
+          <div className="container mx-auto max-w-5xl">
+            <div className="flex flex-col sm:flex-row items-start gap-5 sm:gap-7 rounded-2xl border border-primary/15 bg-primary/5 p-6 md:p-9">
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-primary/10 text-primary">
+                <Handshake className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <div className="space-y-3">
+                <h2 className="text-2xl md:text-3xl font-bold text-foreground leading-snug">
+                  Moje práce podpisem smlouvy nekončí.
+                </h2>
+                <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                  Nejde jen o jednorázové srovnání. Podle naší dohody pohlídám konec fixace, budu sledovat dostupné nabídky na trhu a včas se ozvu, abychom další období řešili s předstihem. Vy si tak nemusíte sami hlídat každý termín.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
         {/* Primary action: easy hand-off after a conversation */}
         <section id="formular" className="py-12 md:py-16 px-4 scroll-mt-24 bg-[hsl(220_20%_98%)]">
           <div className="container mx-auto max-w-6xl grid grid-cols-1 md:grid-cols-2 gap-10 md:gap-14 items-start">
@@ -329,6 +348,10 @@ const Index = () => {
                       title: "Bez starostí",
                       desc: "Pomohu s podklady a administrativou při změně dodavatele.",
                     },
+                    {
+                      title: "Péče i po uzavření smlouvy",
+                      desc: "Podle dohody pohlídám konec fixace a včas s vámi proberu nabídky na další období.",
+                    },
                   ].map(({ title, desc }) => (
                     <li key={title} className="flex gap-3">
                       <Check className="h-5 w-5 text-primary shrink-0 mt-0.5" />
@@ -420,12 +443,12 @@ const Index = () => {
                 Jak probíhá spolupráce?
               </h2>
               <p className="text-muted-foreground">
-                Od vyúčtování k porovnání konkrétních nabídek.
+                Od prvního porovnání až po péči o energie v dalších letech.
               </p>
             </div>
-            <div className="relative grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+            <div className="relative grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
               {/* connecting line on desktop */}
-              <div className="hidden md:block absolute top-5 left-[16.66%] right-[16.66%] h-px bg-border" aria-hidden="true" />
+              <div className="hidden lg:block absolute top-5 left-[12.5%] right-[12.5%] h-px bg-border" aria-hidden="true" />
               {[
                 {
                   step: "1",
@@ -444,6 +467,12 @@ const Index = () => {
                   icon: CheckCircle2,
                   title: "Vyberete další postup",
                   desc: "Projdeme nabídky a jejich podmínky. S vyřízením zvoleného řešení vám pomohu.",
+                },
+                {
+                  step: "4",
+                  icon: Handshake,
+                  title: "Zůstáváme v kontaktu",
+                  desc: "Podle dohody pohlídám konec fixace a včas navrhnu, kdy se znovu podívat na nabídky.",
                 },
               ].map(({ step, icon: Icon, title, desc }) => (
                 <div
