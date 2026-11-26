@@ -190,7 +190,7 @@ const BlogPost = () => {
             <p className="text-muted-foreground">
               {isVietnamese
                 ? "Pošlete poslední vyúčtování jako PDF nebo fotografii. Porovnám ceny a spotřebu a navrhnu další postup. / Hãy gửi hóa đơn gần nhất dưới dạng PDF hoặc ảnh. Tôi sẽ so sánh giá điện và mức tiêu thụ rồi đề xuất các bước tiếp theo."
-                : "Pošlete poslední vyúčtování jako PDF nebo fotografii. Zjistím z něj ceny a spotřebu a navrhnu další postup, abyste zbytečně nepřepláceli."}
+                : "Pošlete poslední vyúčtování jako PDF nebo fotografii. Zjistím spotřebu a jednotlivé účtované položky; pro přesnější srovnání může být potřeba i aktuální ceník či smlouva."}
             </p>
             <Button size="lg" className="text-xs sm:text-sm md:text-base px-5 py-3 md:px-8 w-full sm:w-auto whitespace-normal text-center" asChild>
               {isVietnamese ? (
