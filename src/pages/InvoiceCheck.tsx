@@ -28,7 +28,7 @@ const InvoiceCheck = () => {
               Pojďme zjistit, jestli můžete za energie platit méně.
             </h1>
             <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
+              Z vyúčtování zjistím spotřebu a účtované ceny. Obchodní cenu, stálé a regulované platby i DPH posoudím odděleně, aby bylo srovnání férové. Pokud se cena od posledního vyúčtování změnila, pomůže i aktuální ceník.
             </p>
             <div className="flex flex-col sm:flex-row justify-center gap-3 mt-8">
               <Button size="lg" asChild className="text-base px-8">
@@ -57,13 +57,13 @@ const InvoiceCheck = () => {
           <div className="container mx-auto max-w-5xl">
             <div className="text-center mb-10">
               <h2 className="text-2xl md:text-3xl font-bold">Co přesně zkontroluji</h2>
-              <p className="text-muted-foreground mt-3">Nejde jen o cenu za jednu MWh.</p>
+              <p className="text-muted-foreground mt-3">Důležitá je nejen cena za MWh, ale i stálé platby, regulované položky a nastavení odběru.</p>
             </div>
             <div className="grid md:grid-cols-3 gap-5">
               {[
-                ["Cena a stálé platby", "Porovnám obchodní cenu i pravidelné poplatky s nabídkami spolupracujících dodavatelů."],
+                ["Obchodní cena a stálé platby", "Porovnám ceny dodávky energie a pravidelné poplatky dodavatele na stejném základě, včetně rozlišení DPH."],
                 ["Smlouva a fixace", "Prověřím délku závazku, automatické prodloužení a vhodný okamžik pro řešení nabídky."],
-                ["Distribuční sazba", "Zkontroluji, zda sazba a nastavení odběrného místa odpovídají skutečnému využití."],
+                ["Distribuční sazba a regulované platby", "U elektřiny prověřím distribuční sazbu, jistič a případně rozdělení spotřeby mezi vysoký a nízký tarif. Regulované položky nelze zaměňovat s obchodní cenou."],
               ].map(([title, text]) => (
                 <article key={title} className="rounded-xl border border-border p-6 shadow-sm">
                   <ShieldCheck className="h-6 w-6 text-primary mb-4" />
@@ -83,7 +83,7 @@ const InvoiceCheck = () => {
               <span className="text-xs font-semibold uppercase tracking-wider text-primary">Nezávazná kontrola</span>
               <h2 className="text-2xl md:text-4xl font-bold">Nahrajte poslední vyúčtování</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Stačí PDF nebo fotografie. Pokud dokument nemáte po ruce, napište mi základní údaje do zprávy nebo e-mailem.
+                Stačí čitelné PDF nebo fotografie posledního vyúčtování. Bez dokumentu napište roční spotřebu, obchodní cenu v Kč/MWh (ideálně bez DPH), u elektřiny distribuční sazbu a případně ceny VT/NT, dále stálý plat a konec smlouvy. U ceny uveďte, zda je s DPH a zda zahrnuje distribuci. Co nevíte, doplníme později; z neúplných údajů půjde zprvu jen o orientační posouzení.
               </p>
               <div className="flex gap-3 text-sm text-muted-foreground">
                 <Mail className="h-5 w-5 text-primary shrink-0" />
