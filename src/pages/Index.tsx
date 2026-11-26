@@ -43,7 +43,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Pošlete mi poslední vyúčtování, nebo jednoduše napište, jakou máte cenu, spotřebu a kdy vám končí smlouva. Podívám se na dostupné možnosti a řeknu vám, jestli má smysl něco měnit – teď, nebo až později.
+              Pošlete mi poslední vyúčtování, nebo jednoduše napište, jakou máte cenu, spotřebu a kdy vám končí smlouva. Porovnám dostupné nabídky a ukážu vám, jestli a kolik můžete ušetřit.
             </p>
 
             {/* Audience badges */}
