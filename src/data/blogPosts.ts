@@ -43,13 +43,13 @@ Tủ lạnh, tủ đông và thiết bị nhà bếp có thể chiếm phần l�
 
 ## Modelový výpočet / Ví dụ tính toán minh họa
 
-Při spotřebě **30 MWh ročně** a rozdílu v obchodní ceně **1 000 Kč/MWh bez DPH** vychází rozdíl **30 000 Kč ročně bez DPH**. Jde o modelový výpočet, nikoli o výsledek konkrétního klienta nebo příslib úspory. Nezahrnuje rozdíly ve stálých platbách, regulovaných položkách ani případné náklady na ukončení smlouvy.
-Với mức tiêu thụ **30 MWh mỗi năm** và chênh lệch giá điện **1.000 Kč/MWh chưa VAT**, chênh lệch chi phí là **30.000 Kč mỗi năm chưa VAT**. Đây là ví dụ minh họa, không phải kết quả của một khách hàng cụ thể hay cam kết tiết kiệm. Phép tính chưa bao gồm chênh lệch phí cố định, các khoản phí do cơ quan quản lý quy định hoặc chi phí chấm dứt hợp đồng nếu có.
+Při spotřebě **30 MWh ročně** a rozdílu v obchodní ceně **1 000 Kč/MWh bez DPH** vychází rozdíl samotné obchodní složky **30 000 Kč ročně bez DPH**. Nejde o celkovou úsporu na faktuře, ale o modelový výpočet. Nezahrnuje stálé platby, regulované položky, daně ani případné náklady na ukončení smlouvy.
+Với mức tiêu thụ **30 MWh mỗi năm** và chênh lệch giá điện thương mại **1.000 Kč/MWh chưa VAT**, phần chênh lệch tiền điện thương mại là **30.000 Kč mỗi năm chưa VAT**. Đây chỉ là phép tính minh họa, không phải số tiền tiết kiệm thực tế trên toàn bộ hóa đơn. Phép tính chưa bao gồm phí cố định, phí điều tiết, thuế hoặc chi phí chấm dứt hợp đồng nếu có.
 
 ## Co porovnám / Tôi sẽ so sánh những gì
 
-Z posledního vyúčtování zjistím cenu a spotřebu. S přihlédnutím ke smluvním podmínkám porovnám dostupné nabídky spolupracujících dodavatelů a připravím návrh dalšího postupu.
-Từ hóa đơn gần nhất, tôi sẽ xác định giá điện và mức tiêu thụ. Dựa trên các điều khoản hợp đồng, tôi sẽ so sánh những đề nghị hiện có từ các nhà cung cấp hợp tác và đề xuất các bước tiếp theo.
+Z posledního vyúčtování zjistím spotřebu a jednotlivé účtované položky. Obchodní cenu posoudím odděleně od distribučních a dalších regulovaných plateb i daní. S přihlédnutím ke smluvním podmínkám porovnám dostupné nabídky spolupracujících dodavatelů na stejném základě.
+Từ hóa đơn gần nhất, tôi sẽ xác định mức tiêu thụ và các khoản phí. Tôi sẽ phân biệt giá điện thương mại với phí phân phối, các khoản phí điều tiết và thuế, rồi so sánh các đề nghị hiện có từ các nhà cung cấp hợp tác trên cùng cơ sở và đề xuất bước tiếp theo.
 
 **Pošlete poslední vyúčtování ke kontrole. / Hãy gửi hóa đơn gần nhất để kiểm tra.**
 
@@ -66,9 +66,9 @@ Chỉ cần tệp PDF hoặc ảnh rõ nét. Việc kiểm tra hóa đơn là mi
 
 ## Co má smysl prověřit
 
-- **Ceny a stálé platby:** Jaké náklady vycházejí při vaší spotřebě za celé porovnávané období.
+- **Ceny a stálé platby:** Obchodní ceny elektřiny či plynu porovnávám na stejném základě (Kč/MWh, stejný režim DPH) a připočítávám stálé platby. Pro odhad celkových nákladů zohledňuji také regulované položky a daně.
 - **Smluvní termíny:** Kdy končí závazek a jaké jsou podmínky dalšího období nebo ukončení smlouvy.
-- **Nastavení odběru:** Zda distribuční sazba a parametry připojení odpovídají využití místa.
+- **Nastavení odběru:** U elektřiny kontroluji distribuční sazbu, hlavní jistič a případně vysoký a nízký tarif. Tyto parametry nelze při srovnání zaměňovat mezi různými odběrnými místy.
 
 ## Od podkladů k porovnání nabídek
 
@@ -76,7 +76,7 @@ Pošlete vyúčtování a informace o smlouvách. U menších odběrů porovnám
 
 U obcí zohledníme také pravidla, kterými se řídí výběr dodavatele. Nabídka je podklad pro vaše rozhodnutí, nikoli náhrada případného zadávacího postupu.
 
-**Řešíte jedno nebo více odběrných míst?** K vyúčtování připište jejich počet a termíny konce smluv, pokud je znáte. Připravím návrh dalšího postupu.`,
+**Řešíte jedno nebo více odběrných míst?** K vyúčtování připište jejich počet a termíny konce smluv, pokud je znáte. U částek za MWh uveďte, zda jde o obchodní cenu bez DPH, nebo cenu včetně dalších položek. Připravím návrh dalšího postupu.`,
   },
   {
     slug: "sazba-d02d-zbytecne-draha",
@@ -124,22 +124,22 @@ Nižší cena za MWh může být doprovázena vyšším stálým platem nebo jin
 
 ## S DPH, nebo bez DPH?
 
-Pro výdaje domácnosti je podstatná konečná cena včetně daně. Nabídky lze početně porovnat i bez DPH, pokud jsou všechny částky na stejném základě. **Nemíchejte ceny s DPH a bez DPH ani cenu za kWh a MWh.** Jedna MWh odpovídá 1 000 kWh.
+Pro výdaje domácnosti je podstatná konečná cena včetně daně. Obchodní ceny lze pro porovnání uvádět i bez DPH, pokud jsou všechny částky na stejném základě. **Nemíchejte ceny s DPH a bez DPH, obchodní cenu s celkovou fakturovanou cenou ani cenu za kWh a MWh.** Jedna MWh odpovídá 1 000 kWh.
 
 ## Co na vyúčtování rozlišit
 
-- **Obchodní cenu a stálý plat dodavatele.** Sledujte cenu za odebranou energii i poplatky účtované bez ohledu na spotřebu.
-- **Regulované položky.** Změna dodavatele sama o sobě neznamená jinou distribuční sazbu ani jiného distributora. Náklady ale závisí také na parametrech vašeho odběru.
+- **Obchodní cenu a stálý plat dodavatele.** Sledujte cenu za odebranou energii v Kč/MWh a měsíční poplatky dodavatele. U elektřiny s VT/NT posuzujte oba tarify podle jejich spotřeby.
+- **Regulované položky.** Distribuční sazba u elektřiny, jistič a další parametry odběru ovlivňují regulované platby. Samotná změna dodavatele nemění distributora ani automaticky distribuční sazbu.
 - **Daně a celkovou částku.** Pro domácí rozpočet porovnávejte výsledné výdaje, ne jen jednu položku.
 
 Rozdělení ceny na obchodní a regulovanou část a daně popisuje [ERÚ](https://eru.gov.cz/ceny-energii).
 
 ## Porovnejte stejné období a spotřebu
 
-Použijte stejnou předpokládanou roční spotřebu a připočtěte stálé platby za celé období. Zohledněte délku závazku a případné náklady související se změnou. Další body pro srovnání shrnuje [ERÚ v průvodci změnou dodavatele](https://eru.gov.cz/jak-zmenit-dodavatele).
+Použijte stejnou předpokládanou roční spotřebu, u dvoutarifní elektřiny rozdělenou na VT/NT, a připočtěte stálé platby za celé období. Srovnejte obě nabídky se stejnou daní a stejnými předpoklady u regulovaných plateb. Zohledněte délku závazku a případné náklady související se změnou. Další body pro srovnání shrnuje [ERÚ v průvodci změnou dodavatele](https://eru.gov.cz/jak-zmenit-dodavatele).
 
 Vyúčtování popisuje minulé období. Pokud od té doby dodavatel změnil cenu, přiložte také aktuální ceník nebo oznámení o změně.
 
-**Chcete s porovnáním pomoci?** Pošlete poslední vyúčtování. Zjistím z něj ceny a spotřebu a navrhnu další postup.`,
+**Chcete s porovnáním pomoci?** Pošlete poslední vyúčtování a ideálně i aktuální ceník či nabídku, pokud se od fakturovaného období něco změnilo. Z údajů prověřím srovnatelné náklady a navrhnu další postup.`,
   },
 ];
