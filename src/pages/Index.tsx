@@ -43,7 +43,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Pošlete mi poslední vyúčtování, nebo napište základní údaje o spotřebě, obchodní ceně a konci smlouvy. Nabídky porovnám na stejném základě a ukážu vám, zda a kolik byste mohli ušetřit. Z několika údajů nejprve připravím orientační posouzení.
+              Pošlete mi vyúčtování nebo základní údaje o spotřebě a obchodní ceně. Porovnám dostupné nabídky a ukážu vám, jestli a kolik můžete ušetřit. Bez vyúčtování půjde nejprve o orientační posouzení.
             </p>
 
             {/* Audience badges */}
