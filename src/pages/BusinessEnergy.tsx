@@ -28,7 +28,7 @@ const BusinessEnergy = () => {
                 Prověřím vaše energie a připravím konkrétní nabídku podle spotřeby.
               </h1>
               <p className="mt-6 text-lg md:text-xl text-muted-foreground leading-relaxed">
-                U menších odběrů porovnám dostupné ceníky. U větších spotřeb poptám individuální podmínky a pomohu pohlídat fixace i administrativu.
+                U menších odběrů porovnám ceníky spolupracujících dodavatelů, u větších spotřeb poptám individuální podmínky. Srovnám obchodní ceny, stálé platby a podmínky na stejném základě a pomohu pohlídat fixace i administrativu.
               </p>
               <div className="flex flex-col sm:flex-row gap-3 mt-8">
                 <Button size="lg" asChild>
@@ -52,7 +52,7 @@ const BusinessEnergy = () => {
               <h2 className="text-xl font-bold mb-6">Co pro vás zajistím</h2>
               <div className="space-y-5">
                 {[
-                  { icon: FileSpreadsheet, title: "Kontrola současných smluv", text: "Cena, fixace, prolongace i vhodnost nastavení jednotlivých míst." },
+                  { icon: FileSpreadsheet, title: "Kontrola současných smluv", text: "Obchodní a regulované položky, DPH, distribuční sazba u elektřiny, fixace a podmínky prodloužení." },
                   { icon: BarChart3, title: "Srovnání a individuální nabídky", text: "Postup odpovídající velikosti a charakteru vašeho odběru." },
                   { icon: ShieldCheck, title: "Hlídání termínů", text: "Podle dohody pomohu sledovat konce smluv a připravit podklady pro další období." },
                 ].map(({ icon: Icon, title, text }) => (
@@ -74,7 +74,7 @@ const BusinessEnergy = () => {
             <ol className="grid md:grid-cols-3 gap-5">
               {[
                 ["1", "Pošlete podklady", "Vyúčtování, roční spotřebu a základní informace o smlouvě."],
-                ["2", "Prověřím možnosti", "Podívám se na současné nastavení a získám srovnatelné nabídky."],
+                ["2", "Prověřím možnosti", "Porovnám ceny na stejném základě, včetně stálých plateb a příslušných podmínek."],
                 ["3", "Vy rozhodnete", "Dostanete přehledné podmínky. Pokud dávají smysl, pomohu s administrativou."],
               ].map(([number, title, text]) => (
                 <li key={number} className="rounded-xl border border-border bg-background p-6">
@@ -95,7 +95,7 @@ const BusinessEnergy = () => {
               <span className="text-xs font-semibold uppercase tracking-wider text-primary">Nezávazná poptávka</span>
               <h2 className="text-2xl md:text-4xl font-bold">Pošlete poslední vyúčtování</h2>
               <p className="text-lg text-muted-foreground leading-relaxed">
-                Do zprávy připište počet odběrných míst, přibližnou roční spotřebu a termín konce smlouvy, pokud ho znáte.
+                Přiložte vyúčtování nebo napište počet odběrných míst, roční spotřebu a konec smluv. Pokud uvádíte cenu za MWh, upřesněte, zda jde o obchodní cenu bez DPH, nebo o částku včetně daně či distribuce. U elektřiny pomůže distribuční sazba a u dvoutarifu ceny i spotřeba VT/NT. Chybějící údaje doplníme; bez nich jde nejprve o orientační srovnání.
               </p>
               <p className="text-sm text-muted-foreground">Nemáte dokument po ruce? Napište na <a className="text-primary underline" href="mailto:info@nepreplacejme.cz">info@nepreplacejme.cz</a>.</p>
             </div>
