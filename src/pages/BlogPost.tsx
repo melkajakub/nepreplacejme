@@ -32,7 +32,7 @@ const BlogPost = () => {
     return () => {
       document.title = "Kontrola vyúčtování energií zdarma | Nepřeplácejme.cz";
       const metaDesc = document.querySelector<HTMLMetaElement>('meta[name="description"]');
-      if (metaDesc) metaDesc.content = "Z vyúčtování zjistím vaše ceny a spotřebu. Navrhnu další postup, abyste za elektřinu a plyn zbytečně nepřepláceli. Kontrola je zdarma.";
+      if (metaDesc) metaDesc.content = "Z vyúčtování ověřím spotřebu a účtované položky. Porovnám nabídky elektřiny a plynu na stejném základě a vysvětlím možnou úsporu. Kontrola je zdarma.";
       const canonical = document.querySelector<HTMLLinkElement>('link[rel="canonical"]');
       if (canonical) canonical.href = "https://nepreplacejme.cz/";
       const ogUrl = document.querySelector<HTMLMetaElement>('meta[property="og:url"]');
