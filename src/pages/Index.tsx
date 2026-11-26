@@ -126,9 +126,9 @@ const Index = () => {
             <div className="space-y-6">
               <div className="space-y-3">
                 <span className="text-xs font-semibold uppercase tracking-wider text-primary">Nezávazné posouzení</span>
-                <h2 className="text-2xl md:text-4xl font-bold text-foreground">Vyúčtování, nebo pár údajů? Obojí stačí.</h2>
+                <h2 className="text-2xl md:text-4xl font-bold text-foreground">Vyúčtování, nebo pár údajů? Začít můžeme obojím.</h2>
                 <p className="text-muted-foreground leading-relaxed text-base md:text-lg">
-                  Zvolte si, co je pro vás pohodlnější. Nemusíte nic složitě dohledávat ani vyplňovat všechno najednou.
+                  Vyúčtování umožní přesnější srovnání. Pokud máte jen základní údaje, připravím nejprve orientační posouzení a případně se doptám na podrobnosti.
                 </p>
               </div>
               <div className="grid gap-4">
@@ -138,7 +138,7 @@ const Index = () => {
                     <h3 className="font-semibold text-lg text-foreground">Mám vyúčtování</h3>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Nahrajte PDF nebo fotografii posledního vyúčtování elektřiny či plynu. Z něj zjistím cenu i spotřebu.
+                    Nahrajte PDF nebo fotografii posledního vyúčtování elektřiny či plynu. Ověřím z něj spotřebu, účtované ceny a další položky. Pro aktuální nabídku může být potřeba také platný ceník nebo smlouva.
                   </p>
                 </div>
                 <div className="rounded-xl border border-border bg-background p-5">
@@ -147,10 +147,13 @@ const Index = () => {
                     <h3 className="font-semibold text-lg text-foreground">Své podmínky znám</h3>
                   </div>
                   <p className="text-sm text-muted-foreground leading-relaxed">
-                    Napište do zprávy cenu za MWh, přibližnou roční spotřebu, distribuční sazbu a konec závazku. U ceny uveďte, zda je s DPH, nebo bez DPH. Co nevíte, klidně vynechte.
+                    Napište roční spotřebu, obchodní cenu elektřiny nebo plynu v Kč/MWh (ideálně bez DPH), u elektřiny distribuční sazbu a konec smlouvy. U dvoutarifu uveďte ceny vysokého a nízkého tarifu (VT/NT); hodí se i stálý měsíční plat. Pokud znáte jen cenu s DPH nebo celkovou částku, napište, co zahrnuje. Chybějící údaje spolu upřesníme.
                   </p>
                 </div>
               </div>
+              <p className="text-sm text-muted-foreground leading-relaxed">
+                <strong className="text-foreground">Aby srovnání dávalo smysl:</strong> obchodní cenu za energii nelze zaměňovat s celkovou cenou včetně distribuce a daní. Porovnávám stejné období, spotřebu a ceny na stejném základě; stálé a regulované platby posuzuji zvlášť.
+              </p>
               <div className="rounded-xl border border-primary/20 bg-background p-5 space-y-2">
                 <h3 className="font-semibold text-foreground">Smlouva končí až za několik měsíců?</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">
@@ -460,7 +463,7 @@ const Index = () => {
                   step: "2",
                   icon: BarChart3,
                   title: "Připravím přehled",
-                  desc: "Porovnám dostupné ceníky nebo poptám individuální nabídky podle vaší spotřeby.",
+                  desc: "Porovnám dostupné ceníky nebo individuální nabídky na stejném cenovém základě a zohledním i stálé platby.",
                 },
                 {
                   step: "3",
