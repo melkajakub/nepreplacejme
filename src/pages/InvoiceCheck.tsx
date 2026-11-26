@@ -11,7 +11,7 @@ import { usePageMeta } from "@/hooks/use-page-meta";
 const InvoiceCheck = () => {
   usePageMeta(
     "Kontrola vyúčtování elektřiny a plynu zdarma | Nepřeplácejme.cz",
-    "Z vyúčtování zjistím vaše ceny a spotřebu. Navrhnu další postup, abyste za elektřinu a plyn zbytečně nepřepláceli. Kontrola je zdarma.",
+    "Z vyúčtování ověřím spotřebu a účtované položky. Porovnám nabídky elektřiny a plynu na stejném základě a vysvětlím možnou úsporu. Kontrola je zdarma.",
     "/kontrola-vyuctovani",
   );
 
