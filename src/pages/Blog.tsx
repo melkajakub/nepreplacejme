@@ -36,13 +36,13 @@ const Blog = () => {
               Od vyúčtování ke konkrétnímu návrhu
             </h2>
             <p className="text-muted-foreground leading-relaxed">
-              Z vyúčtování zjistím, jaké ceny za energie platíte a jakou máte spotřebu. Na základě těchto údajů vám navrhnu další postup, abyste zbytečně nepřepláceli.
+              Z vyúčtování zjistím spotřebu a účtované položky. Doplním aktuální smluvní podmínky a ceny, abych mohl porovnat nabídky na stejném základě a navrhnout další postup.
             </p>
             <div className="space-y-3 text-muted-foreground leading-relaxed">
               <div>
                 <strong className="text-foreground">Cena i podmínky smlouvy</strong>
                 <p className="mt-1">
-                  Při porovnání sleduji cenu za MWh, stálé platby, délku závazku i podmínky prodloužení. Podle dohody pomohu také s hlídáním termínů a přípravou na další smluvní období.
+                  Při porovnání odděluji obchodní cenu za MWh, stálé a regulované platby a DPH. U elektřiny zohledním distribuční sazbu i případné VT/NT. Posuzuji také délku závazku a podmínky prodloužení; podle dohody pomohu hlídat další období.
                 </p>
               </div>
               <div>
