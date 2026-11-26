@@ -43,7 +43,7 @@ const Index = () => {
             </h1>
 
             <p className="text-lg md:text-xl text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Pošlete mi poslední vyúčtování, nebo jednoduše napište, jakou máte cenu, spotřebu a kdy vám končí smlouva. Porovnám dostupné nabídky a ukážu vám, jestli a kolik můžete ušetřit.
+              Pošlete mi poslední vyúčtování, nebo napište základní údaje o spotřebě, obchodní ceně a konci smlouvy. Nabídky porovnám na stejném základě a ukážu vám, zda a kolik byste mohli ušetřit. Z několika údajů nejprve připravím orientační posouzení.
             </p>
 
             {/* Audience badges */}
@@ -195,7 +195,7 @@ const Index = () => {
                 {
                   icon: FileSearch,
                   title: "Chci nezávazně posoudit své podmínky",
-                  desc: "Pošlete poslední vyúčtování. Porovnám vaše ceny a spotřebu s dostupnými nabídkami a navrhnu další postup.",
+                  desc: "Pošlete poslední vyúčtování. Prověřím účtované položky, spotřebu a smluvní podmínky a srovnám dostupné nabídky na stejném základě.",
                 },
                 {
                   icon: KeyRound,
@@ -341,7 +341,7 @@ const Index = () => {
                   {[
                     {
                       title: "Srovnání dostupných ceníků",
-                      desc: "Porovnání ceny za energii, stálých plateb a délky závazku u dostupných nabídek.",
+                      desc: "Porovnání obchodní ceny, stálých plateb, DPH a délky závazku; pro celkové náklady zohledním i regulované platby.",
                     },
                     {
                       title: "Srozumitelné vysvětlení",
@@ -400,7 +400,7 @@ const Index = () => {
                   {[
                     {
                       title: "Řešení na míru",
-                      desc: "Pro menší firmy porovnám dostupné ceníky, pro větší odběry poptám individuální podmínky u dodavatelů.",
+                      desc: "Pro menší firmy porovnám ceníky spolupracujících dodavatelů, pro větší poptám individuální podmínky. Vždy na srovnatelném základě.",
                     },
                     {
                       title: "Průběžná péče o odběrná místa",
